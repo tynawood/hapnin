@@ -3,51 +3,57 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1">
-	<title>Swiper Movies App</title>
+	<title>Hapn'n</title>
 
 	<link rel="stylesheet" href="css/idangerous.swiper.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/movies-app.css">
+	
+
+
+    
+    
 	  <link type="text/css" rel="stylesheet" href="css/style.css" />
-</head>
-<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-<script >
+	  <script src="intelxdk.js"></script>
+<script src="xhr.js"></script>
 
- function showUser() {
+
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <!--<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>-->
+
+     <script>
+    $(document).bind("mobileinit", function(){
+    $.mobile.allowCrossDomainPages = true;
+    });
+ </script>
+   <script type="text/javascript" language="javascript">
+   $(document).ready(function() {
+
+      //$("#driver").click(function(event){
+          $.getJSON('http://hapnn.comxa.com/getdata.php', function(jd) {
+          $.each(jd, function(index, item){
+
+            //var anchor = document.getElementById('stage1');
+    //var id = $('#stage1').attr('id');
+              
+             $('#stage1').append( '   <div class="tag">  <img src= "'+jd[index].tag+'"></div>',' <a href= "detail.html?id=' +jd[index].id+ '">  <div class="article-img-pane">  <img src= "'+jd[index].img+'"></div> </a>' ,'<a href= "detail.html?id=' +jd[index].id+ '"> <h2 style="text-transform:capitalize;font-size:14px;width:100%;">   ' + jd[index].what + '</h2> </a>',/*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/'<p> ' + jd[index].date+ ' | ' + jd[index].time+ ' | ' + jd[index].location+'</p>' ,     ' <div class="liner"></div>');
+             //$('#stage2').append('<p>date : ' + jd[index].date+ '</p>');
+             //$('#stage3').append('<p> Detail: ' + jd[index].detail+ '</p>');
+        //$('#stage4').append('<p> Image: <img src= "'+jd[index].img+'"></p>');
+       
+          });
+      });
+   });
+   
+   
   
-  //if (str=="") {
-   // document.getElementById("txtHint").innerHTML="";
-   // return;
- // } 
-  if (window.XMLHttpRequest) {
-    // code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp=new XMLHttpRequest();
-  } else { // code for IE6, IE5
-    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.onreadystatechange=function() {
-    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-      document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
-    }
-  }
-  xmlhttp.open("GET","http://hapnn.comxa.com/getdata.php?q=",true);
-  xmlhttp.send();
-}
-</script>
+   </script>
+</head>
 
 
-<script language="javascript">
-
-setTimeout(function(){
-    document.getElementById("theButton").click();
-}, 100); // wait one second then click the button
+ 
 
 
-
-
-
-		
-</script>
 
 <body>
 
@@ -89,7 +95,7 @@ setTimeout(function(){
 
 	<div class="swiper-container swiper-content">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide">
+			<div class="swiper-slide" style="overflow-y:auto;  ">
 				<div class="inner">
 <div class="search">
 				 <div class="lighter">
@@ -105,28 +111,80 @@ setTimeout(function(){
 
 
 </div>
-						<div id="content" style="overflow-y:auto;">
+						<div id="content" >
                                 
                                 
-                               <form>
-
-<select name="" id="theButton" onclick="showUser(this.value)" style="display:none;">
-</select>
-
-</form>
+         
 <br>
-<div id="txtHint"><b>Loading Today's Hapn'n..... </b></div>
+<div id="txtHint"><!--<b>Loading Today's Hapn'n..... </b>--></div>
 
-				
-				
-				
+				<article id="stage1">
+  
+
+
+
+  <!-- <div id="stage2" style="background-color:blue;">
+         
+   </div>
+   <div id="stage3" style="background-color:blue;">
+          
+   </div>
+    </div>
+    <div id="stage4">
+   
+    
+    </div>-->
+			
+
+				</article>
+      <div style=" height:40px;"> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 				
 				
 			</div>
 					<div class="clearfix"></div>
 				</div>
-			</div>
 			
+			
+
+
+
+
+
+
+
+
 
 
 
@@ -201,7 +259,7 @@ setTimeout(function(){
 			</div>
 			<div class="swiper-slide" style="overflow-y:auto;">
 				<div class="inner">
-					<form action="http://hapnn.comxa.com/share.php" method="post" enctype="multipart/form-data">
+					<form action="share.php" method="post" enctype="multipart/form-data">
 									<p><input type="text" name="what_hapnn" placeholder=" What's Hapn'n?..."  required ></p>	
 									<p><input type="text" name="location" placeholder="Location..."  required ></p>
                                     <p><input type="date" name="date" placeholder="Date..."  required ></p>	
@@ -232,7 +290,7 @@ setTimeout(function(){
                                                      <option value="./tag/university.png">University Events</option>
                                   
                                 
-                      </select></p>
+                     <!-- </select></p>
                                   <p><select name="category" required=required >
                                     <option value="">--Choose Hapn'n Category--</option>
                                     <option value="conference">Conference/Seminars</option>
@@ -260,7 +318,7 @@ setTimeout(function(){
                                     
                                     
                                     
-                                    </select></p>	
+                                    </select></p>	-->
 									<p><textarea name="detail" placeholder="Hapn'n Description..." cols="40" rows="10"></textarea></p>
                                     <p>Hapn'n Image*:<input type="file" name="image"></p>
                                     <!--<p>Hapn'n Video(Optional):<input type="file" name="video"  ></p>	-->
@@ -269,6 +327,17 @@ setTimeout(function(){
 								<p> <br> </p>
 					<div class="clearfix"></div>
 				</div>
+
+
+
+
+
+
+        <div id="front">
+
+          <p>am a man of hope</p>
+
+        </div>
 			</div>
 			
 		</div>
