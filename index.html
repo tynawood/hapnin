@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1">
+	<title>Hapn'n</title>
+
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/movies-app.css">
+	
+
+
+    
+    
+	  <link type="text/css" rel="stylesheet" href="css/style.css" />
+	  <script src="intelxdk.js"></script>
+<script src="xhr.js"></script>
+
+
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <!--<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>-->
+
+     <script>
+    $(document).bind("mobileinit", function(){
+    $.mobile.allowCrossDomainPages = true;
+    });
+ </script>
+   <script type="text/javascript" language="javascript">
+   $(document).ready(function() {
+
+      //$("#driver").click(function(event){
+          $.getJSON('http://hapnn.comxa.com/getdata.php', function(jd) {
+          $.each(jd, function(index, item){
+
+            //var anchor = document.getElementById('stage1');
+    //var id = $('#stage1').attr('id');
+              
+             $('#stage1').append( '   <div class="tag">  <img src= "'+jd[index].tag+'"></div>',' <a href= "detail.html?id=' +jd[index].id+ '">  <div class="article-img-pane">  <img src= "'+jd[index].img+'"></div> </a>' ,'<a href= "detail.html?id=' +jd[index].id+ '"> <h2 style="text-transform:capitalize;font-size:14px;width:100%;">   ' + jd[index].what + '</h2> </a>',/*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/'<p> ' + jd[index].date+ ' | ' + jd[index].time+ ' | ' + jd[index].location+'</p>' ,     ' <div class="liner"></div>');
+             //$('#stage2').append('<p>date : ' + jd[index].date+ '</p>');
+             //$('#stage3').append('<p> Detail: ' + jd[index].detail+ '</p>');
+        //$('#stage4').append('<p> Image: <img src= "'+jd[index].img+'"></p>');
+       
+          });
+      });
+   });
+   
+   
+  
+   </script>
+</head>
+
+
+ 
+
+
+
+<body>
+
+<div class="header">
+
+
+<img src="img/hapn'n.png" alt="1"/>
+</div>
+<div class="swiper-nav">
+
+		<div class="swiper-wrapper">
+			<div class="swiper-slide active-nav">
+            
+			
+				
+				<div class="title">Hapn'n</div>
+			</div>
+			<div class="swiper-slide">
+				
+				
+				<div class="title">Browse</div>
+			</div>
+			<div class="swiper-slide">
+				
+				
+				<div class="title" style="border:none" >Share Hapn'n</div>
+			</div>
+			
+			
+		</div>
+	</div>
+  
+
+
+
+
+
+
+
+	<div class="swiper-container swiper-content">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" style="overflow-y:auto;  ">
+				<div class="inner">
+<div class="search">
+				 <div class="lighter">
+<form>
+	<span><input type="text" class="search rounded" placeholder="Search Mood...">
+    <input type="button" style="background:url(img/search.png);width:42px;height:42px;">
+    </span>
+	
+</form>
+
+</div>
+
+
+
+</div>
+						<div id="content" >
+                                
+                                
+         
+<br>
+<div id="txtHint"><!--<b>Loading Today's Hapn'n..... </b>--></div>
+
+				<article id="stage1">
+  
+
+
+
+  <!-- <div id="stage2" style="background-color:blue;">
+         
+   </div>
+   <div id="stage3" style="background-color:blue;">
+          
+   </div>
+    </div>
+    <div id="stage4">
+   
+    
+    </div>-->
+			
+
+				</article>
+      <div style=" height:40px;"> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+				
+				
+			</div>
+					<div class="clearfix"></div>
+				</div>
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div class="swiper-slide" style="overflow:scroll;">
+				<div class="inner">
+					
+					
+					<div class="browser-cat">C</div>
+                            <p><a href="conference.html">Conference/Seminars</a> </p>
+                            <div class="liner"></div>
+                            
+                            <p>Competitions</p>
+                            <div class="liner"></div>
+                            <p>Classes /Workshop</p>
+                            
+                            	<div class="browser-cat">D</div>
+                            <p>Debates</p>
+                           
+                           
+                           <div class="browser-cat">F</div>
+                           
+                           <p>Festivals</p>
+                           <div class="liner"></div>
+                           <p>Fairs</p>
+                           <div class="liner"></div>
+                           <p>Fundraisers</p>
+                           
+                           
+                           <div class="browser-cat">L</div>
+                           <p>Lauches</p>
+                           
+                           
+                           
+                           <div class="browser-cat">M</div>
+                           <p>Meetings/Networking</p>
+                           <div class="liner"></div>
+                           <p>Music</p>
+                           <div class="liner"></div>
+                           <p>Movies</p>
+                           
+                           <div class="browser-cat">N</div>
+                           <p>Naming Ceremony</p>
+                           <p>Night Club</p>
+                           
+                           
+                           <div class="browser-cat">P</div>
+                           <p>Parties</p>
+                           <div class="liner"></div>
+                           <p>Premiers</p>
+                           <div class="liner"></div>
+                           <p>Performing Arts</p>
+                           <div class="liner"></div>
+                           <p>Protests</p>
+                           <div class="liner"></div>
+                           <p>Political</p>
+                           
+                           <div class="browser-cat">R</div>
+                           <p>Reuniouns</p>
+                           
+                           <div class="browser-cat">S</div>
+                           <p>Sports</p>
+                           
+                           <div class="browser-cat">U</div>
+                           <p>University Events</p></div>
+					<div class="clearfix"></div>
+				
+			</div>
+			<div class="swiper-slide" style="overflow-y:auto;">
+				<div class="inner">
+					<form action="share.php" method="post" enctype="multipart/form-data">
+									<p><input type="text" name="what_hapnn" placeholder=" What's Hapn'n?..."  required ></p>	
+									<p><input type="text" name="location" placeholder="Location..."  required ></p>
+                                    <p><input type="date" name="date" placeholder="Date..."  required ></p>	
+									<p><input type="time" name="time" placeholder="Time..."  required ></p>
+                                    <p> <select name="tag" required=required>
+                       <option value="" selected="selected">---Choose Hapn'n Tag---</option>
+                                  <option value="./tag/conference.png" >Conference/Seminar</option>
+                                  <option value="./tag/competition.png">Competitions</option>
+                                   <option value="./tag/workshop.png">Classes/Workshop</option>
+                                   <option value="./tag/debates.png">Debates</option>
+                                    <option value="./tag/fairs.png">Fairs</option>
+                                     <option value="./tag/festivals.png">Festivals</option>
+                                      <option value="./tag/fundraisers.png">Fundraisers</option>
+                                       <option value="./tag/lunches.png">Lunches</option>
+                                        <option value="./tag/meetings.png">Meetings/Networks</option>
+                                         <option value="./tag/music.png">Music</option>
+                                          <option value="./tag/movies.png">Movies</option>
+                                           <option value="./tag/naming.png">Naming Ceremony</option>
+                                            <option value="./tag/nightclub.png">Night Club</option>
+                                             <option value="./tag/party.png">Party</option>
+                                              <option value="./tag/performing.png">Performing Arts</option>
+                                               <option value="./tag/Protests.png">Protests</option>
+                                                <option value="./tag/political.png">Political</option>
+                                                 <option value="./tag/premiers.png">Premiers</option>
+                                                  <option value="./tag/reunion.png">Reunion</option>
+                                                   <option value="./tag/sports.png">Sports</option>
+                                                    <option value="./tag/theatre.png">Theatre</option>
+                                                     <option value="./tag/university.png">University Events</option>
+                                  
+                                
+                     <!-- </select></p>
+                                  <p><select name="category" required=required >
+                                    <option value="">--Choose Hapn'n Category--</option>
+                                    <option value="conference">Conference/Seminars</option>
+                                    <option value="competition">Competition</option>
+                                    <option value="classes">Classes/Workshop</option>
+                                    <option value="debate">Debate</option>
+                                    <option value="festivals">Festivals</option>
+                                    <option value="fairs">Fairs</option>
+                                    <option value="fundraisers">Fundraisers</option>
+                                    <option value="lunches">Lunches</option>
+                                    <option value="meetings">Meetings/Networks</option>
+                                    <option value="music">Music</option>
+                                    <option value="movies">Movies</option>
+                                    <option value="namingceremony">Naming Ceremony</option>
+                                    <option value="nightclub">Night Club</option>
+                                    <option value="party">Party</option>
+                                    <option value="premiers">Premiers</option>
+                                    <option value="performingarts">Performing Arts</option>
+                                    <option value="protests">Protests</option>
+                                    <option value="political">Political</option>
+                                    <option value="reunions">Reunions</option>
+                                    <option value="sports">Sports</option>
+                                    <option value="theatre">Theatre</option>
+                                    <option value="universityevents">University Events</option>
+                                    
+                                    
+                                    
+                                    </select></p>	-->
+									<p><textarea name="detail" placeholder="Hapn'n Description..." cols="40" rows="10"></textarea></p>
+                                    <p>Hapn'n Image*:<input type="file" name="image"></p>
+                                    <!--<p>Hapn'n Video(Optional):<input type="file" name="video"  ></p>	-->
+									<p><input type="submit" name="submit" value="Send"></p>
+								</form>
+								<p> <br> </p>
+					<div class="clearfix"></div>
+				</div>
+
+
+
+
+
+
+        <div id="front">
+
+          <p>am a man of hope</p>
+
+        </div>
+			</div>
+			
+		</div>
+</div>
+	
+	
+<script src="js/jquery.min.js"></script>
+	<!-- Don't forget to get the latest Swiper and scrollbar version here-->
+<script src="js/idangerous.swiper-2.0.min.js"></script>
+<script src="js/movies-app.js"></script>
+</body>
+</html>

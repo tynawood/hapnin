@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1">
+	<title>Swiper Movies App</title>
+
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/movies-app.css">
+    <link rel="stylesheet" href="css/simple-app.css">
+    
+    
+	  <link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+
+<script>
+ function showUser() {
+	
+  //if (str=="") {
+   // document.getElementById("txtHint").innerHTML="";
+   // return;
+ // } 
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else { // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+      document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+  xmlhttp.open("GET","conference.php?q=",true);
+  xmlhttp.send();
+}
+</script>
+
+
+<script language="javascript">
+
+setTimeout(function(){
+    document.getElementById("theButton").click();
+}, 100); // wait one second then click the button
+
+
+
+
+
+
+		
+</script>
+
+<body>
+
+<div class="header">
+<div class="back"><a href="index.html" style="color:#CCC;"><</a></div>
+
+<img src="img/hapn'n.png" alt="1"/>
+</div>
+	
+		<div class="swiper-wrapper">
+         <!--<div class="swiper-slide "> <a href="#" class="active">Hapn'n</a> <a href="#" style="margin:0 17px">Tab 2</a> <a href="#">Tab 3</a> </div>-->
+			<div class="tag" style="border-bottom:#CCC 1px solid;"><span>tag:</span>Conference</div>
+			
+		</div>
+
+  
+
+
+
+
+
+
+
+	<div class="swiper-container swiper-content" style="overflow-y:auto;">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="inner">
+<div class="search">
+				 <div class="lighter">
+<form>
+	<span><input type="text" class="search rounded" placeholder="Search Mood...">
+    <input type="button" style="background:url(img/search.png);width:42px;height:42px;">
+    </span>
+	
+</form>
+
+</div>
+
+
+
+</div>
+						<div id="content" style="overflow-y:auto;">
+                                
+                                
+                               <form>
+
+<select name="" id="theButton" onclick="showUser(this.value)" style="display:none;">
+</select>
+
+</form>
+<br>
+<div id="txtHint"><b>Loading Today's Hapn'n..... </b></div>
+
+				
+				
+				
+				
+				
+			</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			
+
+<script src="js/jquery.min.js"></script>
+	<!-- Don't forget to get the latest Swiper and scrollbar version here-->
+<script src="js/idangerous.swiper-2.0.min.js"></script>
+<script src="js/movies-app.js"></script>
+
+    
+    <!-- <script>
+  var tabsSwiper = new Swiper('.swiper-container',{
+    onlyExternal : true,
+    speed:500
+  })
+  $(".tabs a").on('touchstart mousedown',function(e){
+    e.preventDefault()
+    $(".tabs .active").removeClass('active')
+    $(this).addClass('active')
+    tabsSwiper.swipeTo( $(this).index() )
+  })
+  $(".tabs a").click(function(e){
+    e.preventDefault()
+  })
+  </script>-->
+  
+</body>
+</html>
