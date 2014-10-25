@@ -47,7 +47,7 @@
           $.getJSON('http://hapnn.comxa.com/detail.php?id='+id, function(jd) {  
        $('#stage1').append('<div>  <img class="imagesizer" src= "'+jd.img+'"></div>');
             
-             // $('#stage3').append('<p>  <img class="imagesizer" src= "'+jd.img+'"></p>');
+             // $('#stage3').append('<p>  <img class="imagesizer" src= "'+ jd.img +'"></p>');
             // $('#stage2').append('<p>Age : ' + jd.age+ '</p>');
              //$('#stage3').append('<p> Sex: ' + jd.sex+ '</p>');
              $('#stage2').append('<p > ' + jd.date+ ' | ' + jd.time+ ' | ' + jd.location+'</p>');
@@ -107,7 +107,7 @@
 					<div class="article-comments">
 						<h3 class="title"><i class="fa fa-comments"></i> Comments</h3>
 						<ul>
-							<li>
+							<!--<li>
 								<img src="img/team/3-th.jpg" />
 								<p class="c-a-name"><strong>John Doe</strong></p>
 								<p class="comment-date">31 Nov 2013</p>
@@ -122,8 +122,8 @@
 								<p class="desc">
 									Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 								</p>
-								<ul>
-									<li>
+								<ul>-->
+									<!--<li>
 										<img src="img/team/1-th.jpg" />
 										<p class="c-a-name"><strong>John Doe</strong></p>
 										<p class="comment-date">31 Nov 2013</p>
@@ -140,7 +140,7 @@
 										</p>
 									</li>
 								</ul>
-							</li>
+							</li>-->
 							<li>
 								<form id="contact" class="contactForm" />
 									
