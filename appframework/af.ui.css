@@ -4,14 +4,14 @@
     GENERAL UI ELEMENTS
 **********************************************************/
 
-/** {
+* {
     -webkit-user-select:none; /* Prevent copy paste for all elements except text fields */
-   /* -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* set highlight color for user interaction */
-    /*-moz-tap-highlight-color:rgba(0, 0, 0, 0); /* set highlight color for user interaction */
-    /*-ms-touch-action:none;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* set highlight color for user interaction */
+    -moz-tap-highlight-color:rgba(0, 0, 0, 0); /* set highlight color for user interaction */
+    -ms-touch-action:none;
     -moz-user-select:-moz-none;
     -webkit-touch-callout: none; /* prevent the popup menu on any links*/
-    /*margin:0;
+    margin:0;
     padding:0;
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
@@ -47,7 +47,7 @@
 }
 
 
-/*#afui #afui_modal {
+#afui #afui_modal {
     background: inherit;
     color:inherit;
     -webkit-backface-visibility: hidden;
@@ -186,18 +186,18 @@ header{display: none;}
     CONTENT AREA
 **********************************************************/
 
- /*#content1, #afui_modal #modalContainer1 {
+ #content, #afui_modal #modalContainer {
     z-index:180;
     
     position:relative;
     /* previous syntax */
-       /* -webkit-box-flex: 1;
+        -webkit-box-flex: 1;
            -moz-box-flex: 1;
             -ms-box-flex: 1;
                 box-flex: 1;
  
         /* current syntax */
-       /* -webkit-flex: 1;
+        -webkit-flex: 1;
            -moz-flex: 1;
             -ms-flex: 1;
                 flex: 1;
@@ -226,7 +226,7 @@ header{display: none;}
 /**********************************************************
     scroller CSS
 **********************************************************/
-/*#afui .y-scroll, #afui .panel.y-scroll {
+#afui .y-scroll, #afui .panel.y-scroll {
     overflow-x:hidden;
     overflow-y:auto;
 }   
@@ -244,7 +244,7 @@ header{display: none;}
 **********************************************************/
 /* Nav bar appears locked to the bottom of the screen. It is the primary navigation. can contain text or graphical navigation */
 
-/*#afui .footer {  
+#afui .footer {  
     z-index:180;
     height:49px;
     display:block;
@@ -302,12 +302,12 @@ header{display: none;}
 }
 
 /* Custom footers - always hidden */
-/*#afui footer, #afui header, #afui nav, #afui aside {    display:none; }
+#afui footer, #afui header, #afui nav, #afui aside {    display:none; }
 
 /* Show the active header/footer/navs */
 
 
-/*#afui > #menu.tabletMenu {
+#afui > #menu.tabletMenu {
     z-index:1;
     width:200px;
     bottom:0;    
@@ -398,7 +398,7 @@ header{display: none;}
 
 
 
-/*#afui .splashscreen {
+#afui .splashscreen {
     background:rgba(29,29,28,1) !important;
     padding-left:40px;
     padding-top:30px !important;
@@ -417,7 +417,7 @@ header{display: none;}
 } /* Header class used for non-navigable header bars (h1 is reserved for the header) */
 
 
-/*#afui .collapsed:after {
+#afui .collapsed:after {
     float:right;
     content:'';
     border-left:5px solid transparent;
@@ -620,7 +620,7 @@ header{display: none;}
 
 
 @media handheld, only screen and (min-width: 768px) {
-   /* #afui .footer.hasMenu.splitview, #afui .header.hasMenu.splitview, #afui  #content1.hasMenu.splitview  {
+    #afui .footer.hasMenu.splitview, #afui .header.hasMenu.splitview, #afui  #content.hasMenu.splitview  {
         position:relative;        
         right:0px;
         margin-left:256px;
@@ -662,7 +662,7 @@ header{display: none;}
         overflow: visible;
         left:0;         
       }*/
-      /*#afui {
+      #afui {
         overflow:visible;
       }
       #afui .panel {
@@ -761,7 +761,7 @@ header{display: none;}
     box-shadow:none;
 }
 
-/*#afui footer>a:not(.button) {
+#afui footer>a:not(.button) {
  
 }
 */
@@ -791,7 +791,7 @@ header{display: none;}
 
 #afui .list .divider { color:black; }
 
-#afui .panel, #afui #modalContainer1, #afui #modal {
+#afui .panel, #afui #modalContainer, #afui #modal {
     color:inherit;
     background:inherit;
 }
@@ -1573,7 +1573,7 @@ margin-bottom: 15px;
 
  */
 
-/*#afui.android {
+#afui.android {
 	font:14px  'Roboto',sans-serif;
  	background:#000;
  	color:#fff;
@@ -1639,7 +1639,7 @@ margin-bottom: 15px;
 	border:none;
 }
 
-#afui.android .panel, #afui.android #modalContainer1 {
+#afui.android .panel, #afui.android #modalContainer {
  	background:inherit;
  	color:inherit;
 }
@@ -2032,7 +2032,7 @@ margin-bottom: 15px;
 	border:none;
 }
 
-#afui.win8 #content1,#afui.win8 #content1 > .panel {
+#afui.win8 #content,#afui.win8 #content > .panel {
  	background:inherit;
  	color:inherit;
 }
@@ -2599,7 +2599,7 @@ margin-bottom: 15px;
     text-shadow:none;
 }
 
-#afui.ios7 .panel, #afui.ios7 #modalContainer1 {
+#afui.ios7 .panel, #afui.ios7 #modalContainer {
     background:rgba(238,238,238,255);    
 }
 
@@ -2982,7 +2982,7 @@ margin-bottom: 15px;
     box-shadow:0 1px 2px #555;
     line-height:18px;
 }
-#afui.ios .panel, #afui.ios #modalContainer1 {
+#afui.ios .panel, #afui.ios #modalContainer {
     background:#e7e7e7;
 }
 
