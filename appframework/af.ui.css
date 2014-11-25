@@ -4,14 +4,14 @@
     GENERAL UI ELEMENTS
 **********************************************************/
 
-* {
+/** {
     -webkit-user-select:none; /* Prevent copy paste for all elements except text fields */
-    -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* set highlight color for user interaction */
-    -moz-tap-highlight-color:rgba(0, 0, 0, 0); /* set highlight color for user interaction */
-    -ms-touch-action:none;
+   /* -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* set highlight color for user interaction */
+    /*-moz-tap-highlight-color:rgba(0, 0, 0, 0); /* set highlight color for user interaction */
+    /*-ms-touch-action:none;
     -moz-user-select:-moz-none;
     -webkit-touch-callout: none; /* prevent the popup menu on any links*/
-    margin:0;
+    /*margin:0;
     padding:0;
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
@@ -47,7 +47,7 @@
 }
 
 
-#afui #afui_modal {
+/*#afui #afui_modal {
     background: inherit;
     color:inherit;
     -webkit-backface-visibility: hidden;
@@ -186,18 +186,18 @@ header{display: none;}
     CONTENT AREA
 **********************************************************/
 
- #content1, #afui_modal #modalContainer1 {
+ /*#content1, #afui_modal #modalContainer1 {
     z-index:180;
     
     position:relative;
     /* previous syntax */
-        -webkit-box-flex: 1;
+       /* -webkit-box-flex: 1;
            -moz-box-flex: 1;
             -ms-box-flex: 1;
                 box-flex: 1;
  
         /* current syntax */
-        -webkit-flex: 1;
+       /* -webkit-flex: 1;
            -moz-flex: 1;
             -ms-flex: 1;
                 flex: 1;
@@ -226,7 +226,7 @@ header{display: none;}
 /**********************************************************
     scroller CSS
 **********************************************************/
-#afui .y-scroll, #afui .panel.y-scroll {
+/*#afui .y-scroll, #afui .panel.y-scroll {
     overflow-x:hidden;
     overflow-y:auto;
 }   
