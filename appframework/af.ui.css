@@ -186,7 +186,7 @@ header{display: none;}
     CONTENT AREA
 **********************************************************/
 
- #content, #afui_modal #modalContainer {
+ #content1, #afui_modal #modalContainer1 {
     z-index:180;
     
     position:relative;
@@ -620,7 +620,7 @@ header{display: none;}
 
 
 @media handheld, only screen and (min-width: 768px) {
-    #afui .footer.hasMenu.splitview, #afui .header.hasMenu.splitview, #afui  #content.hasMenu.splitview  {
+    #afui .footer.hasMenu.splitview, #afui .header.hasMenu.splitview, #afui  #content1.hasMenu.splitview  {
         position:relative;        
         right:0px;
         margin-left:256px;
@@ -791,7 +791,7 @@ header{display: none;}
 
 #afui .list .divider { color:black; }
 
-#afui .panel, #afui #modalContainer, #afui #modal {
+#afui .panel, #afui #modalContainer1, #afui #modal {
     color:inherit;
     background:inherit;
 }
@@ -1639,7 +1639,7 @@ margin-bottom: 15px;
 	border:none;
 }
 
-#afui.android .panel, #afui.android #modalContainer {
+#afui.android .panel, #afui.android #modalContainer1 {
  	background:inherit;
  	color:inherit;
 }
@@ -2032,7 +2032,7 @@ margin-bottom: 15px;
 	border:none;
 }
 
-#afui.win8 #content,#afui.win8 #content > .panel {
+#afui.win8 #content1,#afui.win8 #content1 > .panel {
  	background:inherit;
  	color:inherit;
 }
@@ -2599,7 +2599,7 @@ margin-bottom: 15px;
     text-shadow:none;
 }
 
-#afui.ios7 .panel, #afui.ios7 #modalContainer {
+#afui.ios7 .panel, #afui.ios7 #modalContainer1 {
     background:rgba(238,238,238,255);    
 }
 
@@ -2982,7 +2982,7 @@ margin-bottom: 15px;
     box-shadow:0 1px 2px #555;
     line-height:18px;
 }
-#afui.ios .panel, #afui.ios #modalContainer {
+#afui.ios .panel, #afui.ios #modalContainer1 {
     background:#e7e7e7;
 }
 
