@@ -77,7 +77,7 @@
    $(document).ready(function() {
 
       //$("#driver").click(function(event){
-          $.getJSON('getdata.php', function(jd) {
+          $.getJSON('http://ofmghonline.com/hapnin/getdata.php', function(jd) {
           $.each(jd, function(index, item){
 
             //var anchor = document.getElementById('stage1');
@@ -104,7 +104,7 @@
 
 <body>
 <div id="header" class="header" style="display:none;width:0;height:0;"> </div>
-<div class="header">
+<div class="header" style="background:#fff;">
 
 
 <img src="img/hapn'n.png" alt="1"/>
@@ -334,28 +334,28 @@
 
              <select name="tag" required=required>
                        <option value="" selected="selected">---Choose a Tag For what's Hapnin---</option>
-                                  <option value="http://hapnn.comxa.com/tag/conference.png" >Conference/Seminar</option>
-                                  <option value="http://hapnn.comxa.com/tag/competition.png">Competitions</option>
-                                   <option value="http://hapnn.comxa.com/tag/workshop.png">Classes/Workshop</option>
-                                   <option value="http://hapnn.comxa.com/tag/debates.png">Debates</option>
-                                    <option value="http://hapnn.comxa.com/tag/fairs.png">Fairs</option>
-                                     <option value="http://hapnn.comxa.com/tag/festivals.png">Festivals</option>
-                                      <option value="http://hapnn.comxa.com/tag/fundraisers.png">Fundraisers</option>
-                                       <option value="http://hapnn.comxa.com/tag/lunches.png">Lunches</option>
-                                        <option value="http://hapnn.comxa.com/tag/meetings.png">Meetings/Networks</option>
-                                         <option value="http://hapnn.comxa.com/tag/music.png">Music</option>
-                                          <option value="http://hapnn.comxa.com/tag/movies.png">Movies</option>
-                                           <option value="http://hapnn.comxa.com/tag/naming.png">Naming Ceremony</option>
-                                            <option value="http://hapnn.comxa.com/tag/nightclub.png">Night Club</option>
-                                             <option value="http://hapnn.comxa.com/tag/party.png">Party</option>
-                                              <option value="http://hapnn.comxa.com/tag/performing.png">Performing Arts</option>
-                                               <option value="http://hapnn.comxa.com/tag/Protests.png">Protests</option>
-                                                <option value="http://hapnn.comxa.com/tag/political.png">Political</option>
-                                                 <option value="http://hapnn.comxa.com/tag/premiers.png">Premiers</option>
+                                  <option value="http://ofmghonline.com/hapnin/tag/conference.png" >Conference/Seminar</option>
+                                  <option value="http://ofmghonline.com/hapnin/tag/competition.png">Competitions</option>
+                                   <option value="http://ofmghonline.com/hapnin/tag/workshop.png">Classes/Workshop</option>
+                                   <option value="http://ofmghonline.com/hapnin/tag/debates.png">Debates</option>
+                                    <option value="http://ofmghonline.com/hapnin/tag/fairs.png">Fairs</option>
+                                     <option value="http://ofmghonline.com/hapnin/tag/festivals.png">Festivals</option>
+                                      <option value="http://ofmghonline.com/hapnin/tag/fundraisers.png">Fundraisers</option>
+                                       <option value="http://ofmghonline.com/hapnin/tag/lunches.png">Lunches</option>
+                                        <option value="http://ofmghonline.com/hapnin/tag/meetings.png">Meetings/Networks</option>
+                                         <option value="http://ofmghonline.com/hapnin/tag/music.png">Music</option>
+                                          <option value="http://ofmghonline.com/hapnin/tag/movies.png">Movies</option>
+                                           <option value="http://ofmghonline.com/hapnin/tag/naming.png">Naming Ceremony</option>
+                                            <option value="http://ofmghonline.com/hapnin/tag/nightclub.png">Night Club</option>
+                                             <option value="http://ofmghonline.com/hapnin/tag/party.png">Party</option>
+                                              <option value="http://ofmghonline.com/hapnin/tag/performing.png">Performing Arts</option>
+                                               <option value="http://ofmghonline.com/hapnin/tag/Protests.png">Protests</option>
+                                                <option value="http://ofmghonline.com/hapnin/tag/political.png">Political</option>
+                                                 <option value="http://ofmghonline.com/hapnin/tag/premiers.png">Premiers</option>
                                                   <option value="reunion.png">Reunion</option>
-                                                   <option value="http://hapnn.comxa.com/tag/sports.png">Sports</option>
-                                                    <option value="http://hapnn.comxa.com/tag/theatre.png">Theatre</option>
-                                                     <option value="http://hapnn.comxa.com/tag/university.png">University Events</option>
+                                                   <option value="http://ofmghonline.com/hapnin/tag/sports.png">Sports</option>
+                                                    <option value="http://ofmghonline.com/hapnin/tag/theatre.png">Theatre</option>
+                                                     <option value="http://ofmghonline.com/hapnin/tag/university.png">University Events</option>
                                   
                                 
                      </select>
@@ -462,7 +462,7 @@
 $( 'form' )
   .submit( function() {
     $.ajax( {
-      url: 'share.php',
+      url: 'http://ofmghonline.com/hapnin/share.php',
       type: 'POST',
       data: new FormData( this ),
       processData: false,
