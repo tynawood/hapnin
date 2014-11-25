@@ -44,16 +44,18 @@
    
 //var id = $('#stage1').attr('id');
      // $("#2").click(function(event){
-          $.getJSON('http://hapnn.comxa.com/detail.php?id='+id, function(jd) {  
-       $('#stage1').append('<div>  <img class="imagesizer" src= "'+jd.img+'"/></div>');
+          $.getJSON('detail.php?id='+id, function(jd) {  
+       $('#stage1').append('<div>  <img class="imagesizer" src= "'+jd.img+'"></div>');
+     
             
-             // $('#stage3').append('<p>  <img class="imagesizer" src= "'+ jd.img +'"></p>');
+             // $('#stage3').append('<p>  <img class="imagesizer" src= "'+jd.img+'"></p>');
             // $('#stage2').append('<p>Age : ' + jd.age+ '</p>');
              //$('#stage3').append('<p> Sex: ' + jd.sex+ '</p>');
-             $('#stage2').append('<p > ' + jd.date+ ' | ' + jd.time+ ' | ' + jd.location+'</p>');
+                 $('#stage2').append('<p>  ' + jd.what + '</p>');
+             $('#stage3').append('<p > ' + jd.date+ ' at ' + jd.time+ ' | Venue:' + jd.location+'</p>');
                // $('#stage4').append('<p> ' + jd.location+ '</p>');
                  //  $('#stage5').append('<p> ' + jd.time+ '</p>');
-                  $('#stage3').append('<p>  ' + jd.what + '</p>');
+                
              $('#stage4').append('<p>  ' + jd.detail+ '</p>');
        
           //});
@@ -74,13 +76,12 @@
 
     
 			<div class="header">
-<div class="back"><a href="index.html" style="color:#CCC;"><</a></div>
+<a href="index.html"><div class="back"></div></a>
 
 <img src="img/hapn'n.png" alt="1"/>
 </div>
 			<div id="content">
 			
-
 				<article>
 
 
@@ -89,78 +90,28 @@
                 
 					
 					<!--<div id="stage2" class="imagesizer"></div>-->
-
+<h5 id="stage2" style="font-size:24px ;font-weight:bold; color:#662d91; text-transform:capitalize;margin-top:-10px;margin-bottom:-10px;width100%;position:relative;"></h5>
 					
-                 <div id="stage2" class="a-meta a-meta-left">
+                 <div id="stage3" class="a-meta a-meta-left">
 						
 					</div>
-                    <br>
+                    
 
-                    <h5 id="stage3" style="font-size:24px ;font-weight:bold; color:#F00; text-transform:capitalize;margin-top:-10px;margin-bottom:10px;width100%;position:relative;"></h5>
+                    
 					<p>
- <div> </div>
+<br>
 						
 						<span id="stage4" class="c-red"></span> 
 					</p>
-                    <div class="liner"</div>
+             
+					<div class="poster">Events by:</div>
 					
-					<div class="article-comments">
-						<h3 class="title"><i class="fa fa-comments"></i> Comments</h3>
-						<ul>
-							<!--<li>
-								<img src="img/team/3-th.jpg" />
-								<p class="c-a-name"><strong>John Doe</strong></p>
-								<p class="comment-date">31 Nov 2013</p>
-								<p class="desc">
-									Lorem ipsum is simply dummy text of the printing and industry.
-								</p>
-							</li>
-							<li>
-								<img src="img/team/2-th.jpg" />
-								<p class="c-a-name"><strong>John Doe</strong></p>
-								<p class="comment-date">31 Nov 2013</p>
-								<p class="desc">
-									Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-								</p>
-								<ul>-->
-									<!--<li>
-										<img src="img/team/1-th.jpg" />
-										<p class="c-a-name"><strong>John Doe</strong></p>
-										<p class="comment-date">31 Nov 2013</p>
-										<p class="desc">
-											Lorem ipsum is simply dummy text of the printing and industry.
-										</p>
-									</li>
-									<li>
-										<img src="img/team/2-th.jpg" />
-										<p class="c-a-name"><strong>John Doe</strong></p>
-										<p class="comment-date">31 Nov 2013</p>
-										<p class="desc">
-											Lorem ipsum is simply dummy text of the printing and industry.
-										</p>
-									</li>
-								</ul>
-							</li>-->
-							<li>
-								<form id="contact" class="contactForm" />
-									
-									<label>Full Name <span class="required">*</span></label>
-									<input type="text" name="name" id="ContactName" placeholder="Name" />
-									
-									<label>Email <span class="required">*</span></label>
-									<input type="email" name="mail" id="ContactEmail" placeholder="Email" />
-									
-									<label>Message <span class="required">*</span></label>
-									<textarea id="ContactMessage" name="comment" placeholder="Message"></textarea>
-									
-									<input type="submit" class="btn-normal" id="SubmitContact" value="Comment" />
-									
-									<div id="msg" class="notifications" style="display:none"></div>
-								</form>
-							</li>
-						</ul>
-					</div>
-     
+						
+						
+				
+          <div class="but">
+          	<div class="divider"></div>
+      </div>
 				</article>
                 
               

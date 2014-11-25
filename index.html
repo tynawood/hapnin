@@ -1,17 +1,29 @@
 <!doctype html>
 <html lang="en">
+<html manifest="/cache.manifest">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1">
-	<title>Hapn'n</title>
+	<title>Hapnin</title>
 
 	<link rel="stylesheet" href="css/idangerous.swiper.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/movies-app.css">
+
+
+
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
+    
+    <link rel="stylesheet" type="text/css" href="appframework/af.ui.css" />
+  
+    <script type="text/javascript" charset="utf-8" src="appframework/appframework.ui.min.js"></script>
+
+
 	
 
-
-    
+<script src="http://code.jquery.com/jquery-1.10.1.min.js">
+</script>
+    <link type="text/css" rel="stylesheet" href="boot.min.css">
     
 	  <link type="text/css" rel="stylesheet" href="css/style.css" />
 	  <!---<script src="intelxdk.js"></script>
@@ -27,16 +39,51 @@
     });
  </script>
    <script type="text/javascript" language="javascript">
+
+
+(function () {
+    var displayOnlineStatus = document.getElementById("online-status"),
+        isOnline = function () {
+            displayOnlineStatus.innerHTML = "Online";
+            displayOnlineStatus.className = "online";
+        },
+        isOffline = function () {
+            displayOnlineStatus.innerHTML = "Offline";
+            displayOnlineStatus.className = "offline";
+        };
+
+    if (window.addEventListener) {
+        /*
+            Works well in Firefox and Opera with the 
+            Work Offline option in the File menu.
+            Pulling the ethernet cable doesn't seem to trigger it.
+            Later Google Chrome and Safari seem to trigger it well
+        */
+        window.addEventListener("online", isOnline, false);
+        window.addEventListener("offline", isOffline, false);
+    }
+    else {
+        /*
+            Works in IE with the Work Offline option in the 
+            File menu and pulling the ethernet cable
+        */
+        document.body.ononline = isOnline;
+        document.body.onoffline = isOffline;
+    }
+})();
+
+
+   
    $(document).ready(function() {
 
       //$("#driver").click(function(event){
-          $.getJSON('http://hapnn.comxa.com/getdata.php', function(jd) {
+          $.getJSON('getdata.php', function(jd) {
           $.each(jd, function(index, item){
 
             //var anchor = document.getElementById('stage1');
     //var id = $('#stage1').attr('id');
               
-             $('#stage1').append( '   <div class="tag">  <img src= "'+jd[index].tag+'"></div>',' <a href= "detail.html?id=' +jd[index].id+ '">  <div class="article-img-pane">  <img src= "'+ jd[index].img +'"></div> </a>' ,'<a href= "detail.html?id=' +jd[index].id+ '"> <h2 style="text-transform:capitalize;font-size:12px;width:100%;">   ' + jd[index].what + ' @ ' + jd[index].location+'</h2> </a>',/*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/'<p> ' + jd[index].date+ ' at ' + jd[index].time+ '</p>' ,     ' <div class="liner"></div>');
+             $('#stage1').append(  '   <div class="tag">  <img src= "'+jd[index].tag+'"></div>',' <a href= "detail.html?id=' +jd[index].id+ '">  <div class="article-img-pane">  <img src= "'+ jd[index].img +'"></div> </a>' ,'<a href= "detail.html?id=' +jd[index].id+ '"> <h2 style="text-transform:capitalize;font-size:12px;width:100%;">   ' + jd[index].what + ' @ ' + jd[index].location+'</h2> </a>',/*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/'<p style="font-size:12px;"> ' + jd[index].date+ ' at ' + jd[index].time+ '</p>' ,     ' <div class="liner"></div>');
              //$('#stage2').append('<p>date : ' + jd[index].date+ '</p>');
              //$('#stage3').append('<p> Detail: ' + jd[index].detail+ '</p>');
         //$('#stage4').append('<p> Image: <img src= "'+jd[index].img+'"></p>');
@@ -56,7 +103,7 @@
 
 
 <body>
-
+<div id="header" class="header" style="display:none;width:0;height:0;"> </div>
 <div class="header">
 
 
@@ -69,17 +116,17 @@
             
 			
 				
-				<div class="title">Hapn'n</div>
+				<div class="title">Hapnin</div>
 			</div>
 			<div class="swiper-slide">
 				
 				
-				<div class="title">Browse</div>
+				<div class="title">Explore</div>
 			</div>
 			<div class="swiper-slide">
 				
 				
-				<div class="title" style="border:none" >Share Hapn'n</div>
+				<div class="title" style="border:none" >Share Hapnin</div>
 			</div>
 			
 			
@@ -97,12 +144,15 @@
 		<div class="swiper-wrapper">
 			<div class="swiper-slide" style="overflow-y:auto;  ">
 				<div class="inner">
-<div class="search">
+          <div class="input-group" style="border:#fff;"><input type="test" name="password" class="form-control" required Placeholder="Check Hapnin With Location" style=
+            "font-size:15px;"  ><span
+                    class="input-group-btn"><input type="submit" value="Check"  class="btn btn-primary" style="height:34px;font-size:13px;margin-top:-1px;background:#682d91;border:#682d91;">Check</a></span></div>
+<!--<div class="search">
 				 <div class="lighter">
-<form>
-	<span><input type="text" class="search rounded" placeholder="Search Mood...">
-    <input type="button" style="background:url(img/search.png);width:42px;height:42px;">
-    </span>
+<form id="#search">
+	<span><input type="text" class="search rounded" placeholder="Search per Mood...">
+    <!--<input type="submit" style="background:url(img/search.png);width:42px;height:42px;margin-top:-10px;">-->
+   <!-- </span>
 	
 </form>
 
@@ -110,7 +160,7 @@
 
 
 
-</div>
+</div>-->
 						<div id="content" >
                                 
                                 
@@ -137,6 +187,7 @@
 			
 
 				</article>
+
       <div style=" height:40px;"> </div>
 
 
@@ -199,10 +250,10 @@
 					
 					<div class="browser-cat">C</div>
                             <p><a href="conference.html">Conference/Seminars</a> </p>
-                            <div class="liner"></div>
+                            <div class="liner1"></div>
                             
                             <p>Competitions</p>
-                            <div class="liner"></div>
+                            <div class="liner1"></div>
                             <p>Classes /Workshop</p>
                             
                             	<div class="browser-cat">D</div>
@@ -212,9 +263,9 @@
                            <div class="browser-cat">F</div>
                            
                            <p>Festivals</p>
-                           <div class="liner"></div>
+                           <div class="liner1"></div>
                            <p>Fairs</p>
-                           <div class="liner"></div>
+                           <div class="liner1"></div>
                            <p>Fundraisers</p>
                            
                            
@@ -225,9 +276,9 @@
                            
                            <div class="browser-cat">M</div>
                            <p>Meetings/Networking</p>
-                           <div class="liner"></div>
+                           <div class="liner1"></div>
                            <p>Music</p>
-                           <div class="liner"></div>
+                           <div class="liner1"></div>
                            <p>Movies</p>
                            
                            <div class="browser-cat">N</div>
@@ -237,13 +288,13 @@
                            
                            <div class="browser-cat">P</div>
                            <p>Parties</p>
-                           <div class="liner"></div>
+                           <div class="liner1"></div>
                            <p>Premiers</p>
-                           <div class="liner"></div>
+                           <div class="liner1"></div>
                            <p>Performing Arts</p>
-                           <div class="liner"></div>
+                           <div class="liner1"></div>
                            <p>Protests</p>
-                           <div class="liner"></div>
+                           <div class="liner1"></div>
                            <p>Political</p>
                            
                            <div class="browser-cat">R</div>
@@ -259,7 +310,73 @@
 			</div>
 			<div class="swiper-slide" style="overflow-y:auto;">
 				<div class="inner">
-					<form action="share.php" method="post" enctype="multipart/form-data">
+
+
+
+
+            <div style="text-align:center">
+            
+            <p><a href="regpin.html" style="color:#0088D1;">Get a Share Pin If you dont have one!</a></p>
+          
+            
+             <p><a href="recovery.html" style="color:#0088D1;">Recover Share Pin!</a></p>
+            
+            </div>
+          
+                <form method="post"  enctype="multipart/form-data">
+            <input name="what_hapnn" id="whathapnn" type="text" placeholder="What's Hapnin in your world......? " />
+            <input name="location" id="location" type="text" placeholder="Location...." />
+            <input name="date" id="date" type="date" placeholder="mm/dd/yyyy" />
+
+
+            <input name="time" id="time" type="time" pattern="11:00 Am" />
+
+
+             <select name="tag" required=required>
+                       <option value="" selected="selected">---Choose a Tag For what's Hapnin---</option>
+                                  <option value="http://hapnn.comxa.com/tag/conference.png" >Conference/Seminar</option>
+                                  <option value="http://hapnn.comxa.com/tag/competition.png">Competitions</option>
+                                   <option value="http://hapnn.comxa.com/tag/workshop.png">Classes/Workshop</option>
+                                   <option value="http://hapnn.comxa.com/tag/debates.png">Debates</option>
+                                    <option value="http://hapnn.comxa.com/tag/fairs.png">Fairs</option>
+                                     <option value="http://hapnn.comxa.com/tag/festivals.png">Festivals</option>
+                                      <option value="http://hapnn.comxa.com/tag/fundraisers.png">Fundraisers</option>
+                                       <option value="http://hapnn.comxa.com/tag/lunches.png">Lunches</option>
+                                        <option value="http://hapnn.comxa.com/tag/meetings.png">Meetings/Networks</option>
+                                         <option value="http://hapnn.comxa.com/tag/music.png">Music</option>
+                                          <option value="http://hapnn.comxa.com/tag/movies.png">Movies</option>
+                                           <option value="http://hapnn.comxa.com/tag/naming.png">Naming Ceremony</option>
+                                            <option value="http://hapnn.comxa.com/tag/nightclub.png">Night Club</option>
+                                             <option value="http://hapnn.comxa.com/tag/party.png">Party</option>
+                                              <option value="http://hapnn.comxa.com/tag/performing.png">Performing Arts</option>
+                                               <option value="http://hapnn.comxa.com/tag/Protests.png">Protests</option>
+                                                <option value="http://hapnn.comxa.com/tag/political.png">Political</option>
+                                                 <option value="http://hapnn.comxa.com/tag/premiers.png">Premiers</option>
+                                                  <option value="reunion.png">Reunion</option>
+                                                   <option value="http://hapnn.comxa.com/tag/sports.png">Sports</option>
+                                                    <option value="http://hapnn.comxa.com/tag/theatre.png">Theatre</option>
+                                                     <option value="http://hapnn.comxa.com/tag/university.png">University Events</option>
+                                  
+                                
+                     </select>
+
+
+                     <textarea name="detail" id="detail" placeholder="Hapnin Detail..."  rows="5"></textarea>
+
+ <input name="image" id="image" type="file" placeholder="hapnin image" />
+
+            <input name="share_pin" id="sharepin" type="password" placeholder=" Share Pin" />
+            <!--<input name="password2" type="password" placeholder="confirm pin" />-->
+           <input class="button block green" type="submit"  data-inline="true" value="Share" id="register" style="width:100%;">
+        </form>
+         <br>
+        <p> <br> </p>
+        
+        </div>
+    </div>
+       
+       
+				<!--	<form action="share.php" method="post" enctype="multipart/form-data">
 									<p><input type="text" name="what_hapnn" placeholder=" What's Hapn'n?..."  required ></p>	
 									<p><input type="text" name="location" placeholder="Location..."  required ></p>
                                     <p><input type="date" name="date" placeholder="Date..."  required ></p>	
@@ -319,12 +436,12 @@
                                     
                                     
                                     </select></p>	-->
-                                    <p> </p>
+                                   <!-- <p> </p>
 									<p><textarea name="detail" placeholder="Hapn'n Description..." cols="40" rows="10"></textarea></p>
                                     <p>Hapn'n Image*:<input type="file" name="image"></p>
                                     <!--<p>Hapn'n Video(Optional):<input type="file" name="video"  ></p>	-->
-									<p><input type="submit" name="submit" value="Send"></p>
-								</form>
+									<!--<p><input type="submit" name="submit" value="Send"></p>
+								</form>-->
 								<p> <br> </p>
 					<div class="clearfix"></div>
 				</div>
@@ -338,11 +455,78 @@
 			
 		</div>
 </div>
+
+<script type="text/javascript">
+
+
+$( 'form' )
+  .submit( function() {
+    $.ajax( {
+      url: 'share.php',
+      type: 'POST',
+      data: new FormData( this ),
+      processData: false,
+      contentType: false,
+
+
+      success: function(FormData){
+           // console.log(data);
+            alert('Sharing sucessful');
+            //window.location.href = "index.html";
+        },
+
+        error: function(FormData){
+            //console.log(data);
+            alert('Sharing unsuccessfully ');
+           // window.location.href = "index.html";
+        }
+        
+   
+
+    } );
+   
+   
+  } );
+    
+/*$('form').submit( function() {
+    var postData = $(this).serialize();
+    
+    $.ajax({
+        type: 'POST',
+       data: postData,
+        url: 'share.php',
+        
+        success: function(data){
+            console.log(data);
+            alert('Hapnin Was Shared successfully ');
+            window.location.href = "index.html";
+        },
+        error: function(data){
+            console.log(data);
+            alert('Sharing Unsucessful');
+            window.location.href = "index.html";
+        });
+
+
+   
+    
+    return false;
+});
+    
+    */
+
+        </script>
+
 	
 	
 <script src="js/jquery.min.js"></script>
 	<!-- Don't forget to get the latest Swiper and scrollbar version here-->
 <script src="js/idangerous.swiper-2.0.min.js"></script>
 <script src="js/movies-app.js"></script>
+
+
+
+
+
 </body>
 </html>
