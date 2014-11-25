@@ -3,7 +3,7 @@
 <html manifest="/cache.manifest">
 <head>
 
-  <style>
+  <!--<style>
 #splash {
     background-attachment: scroll;
     background-color: #fff; 
@@ -18,7 +18,7 @@
     z-index: 10;
 }
 
-  </style>
+  </style>-->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1">
 	<title>Hapnin</title>
@@ -53,12 +53,12 @@
      <script>
 
 
-     $(document).ready(function(){
+     /*$(document).ready(function(){
             setTimeout(function(){
                 navigator.splashscreen.hide();
                 $('#splash').fadeOut();
             },1500);
-        });
+        });*/
     $(document).bind("mobileinit", function(){
     $.mobile.allowCrossDomainPages = true;
     });
