@@ -655,13 +655,13 @@ header{display: none;}
 }
 
 @media print {
-      body {
+      /*body {
           overflow:visible;
       }
       #afui #content{
         overflow: visible;
         left:0;         
-      }
+      }*/
       #afui {
         overflow:visible;
       }
