@@ -28,19 +28,22 @@
 <script src="xhr.js"></script>-->
 
 
-    <!--<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-    <!--<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>-->
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>-->
 
      <script>
       $(document).ready(function() {
 
-$('.swiper-slide select').on('mousedown touchstart', function(e){
-  e.stopPropagation()
-});
+        if (!isTouchEvent && !_this.isAndroid) {
+    if (event.preventDefault) event.preventDefault();
+    else event.returnValue = false;
+}
 
-$('.swiper-slide text').on('mousedown touchstart', function(e){
-  e.stopPropagation()
-});
+//$('.swiper-slide select').on('mousedown touchstart', function(e){
+  //e.stopPropagation()
+//});
+
+
 
 
 });
@@ -534,7 +537,7 @@ $( 'form' )
 	
 <!--<script src="js/jquery.min.js"></script>-->
 	<!-- Don't forget to get the latest Swiper and scrollbar version here-->
-<script src="js/idangerous.swiper-2.0.min.js"></script>
+<script src="js/idangerous.swiper-2.4.min.js"></script>
 <script src="js/movies-app.js"></script>
 
 
