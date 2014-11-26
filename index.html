@@ -34,21 +34,7 @@
    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 
      <script>
-      $(document).ready(function() {
-
-        if (!isTouchEvent && !_this.isAndroid) {
-    if (event.preventDefault) event.preventDefault();
-    else event.returnValue = false;
-}
-
-//$('.swiper-slide select').on('mousedown touchstart', function(e){
-  //e.stopPropagation()
-//});
-
-
-
-
-});
+      
 
 
     $(document).bind("mobileinit", function(){
@@ -58,39 +44,7 @@
    <script type="text/javascript" language="javascript">
 
 
-(function () {
-    var displayOnlineStatus = document.getElementById("online-status"),
-        isOnline = function () {
-            displayOnlineStatus.innerHTML = "Online";
-            displayOnlineStatus.className = "online";
-        },
-        isOffline = function () {
-            displayOnlineStatus.innerHTML = "Offline";
-            displayOnlineStatus.className = "offline";
-        };
 
-    if (window.addEventListener) {
-        /*
-            Works well in Firefox and Opera with the 
-            Work Offline option in the File menu.
-            Pulling the ethernet cable doesn't seem to trigger it.
-            Later Google Chrome and Safari seem to trigger it well
-        */
-        window.addEventListener("online", isOnline, false);
-        window.addEventListener("offline", isOffline, false);
-    }
-    else {
-        /*
-            Works in IE with the Work Offline option in the 
-            File menu and pulling the ethernet cable
-        */
-        document.body.ononline = isOnline;
-        document.body.onoffline = isOffline;
-    }
-})();
-
-
-   
    $(document).ready(function() {
 
       //$("#driver").click(function(event){
@@ -537,9 +491,9 @@ $( 'form' )
 
 	
 	
-<script src="js/jquery.min.js"></script>
+<!--<script src="js/jquery.min.js"></script>-->
 	<!-- Don't forget to get the latest Swiper and scrollbar version here-->
-<script src="js/idangerous.swiper-2.0.min.js"></script>
+<script src="js/idangerous.swiper-2.4.min.js"></script>
 <script src="js/movies-app.js"></script>
 
 
