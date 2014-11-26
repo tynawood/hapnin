@@ -226,7 +226,7 @@ header{display: none;}
 /**********************************************************
     scroller CSS
 **********************************************************/
-#afui .y-scroll, #afui .panel.y-scroll {
+/*#afui .y-scroll, #afui .panel.y-scroll {
     overflow-x:hidden;
     overflow-y:auto;
 }   
@@ -328,7 +328,7 @@ header{display: none;}
 }
 
 
-#afui #menu_scroller, #afui #aside_menu_scroller {
+/*#afui #menu_scroller, #afui #aside_menu_scroller {
     padding-bottom:10px;
     overflow-y:auto;
     overflow-x:hidden;
@@ -341,7 +341,7 @@ header{display: none;}
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
 }
-
+*/
 
 #afui #menu .list li, 
 #afui #menu .list .divider, 
@@ -1670,8 +1670,8 @@ margin-bottom: 15px;
     border-top-color:inherit;
 }
 
-#afui.android .afScrollbar {background:white !important;}
-#afui.android.light .afScrollbar {background:black !important;}
+/*#afui.android .afScrollbar {background:white !important;}
+#afui.android.light .afScrollbar {background:black !important;}*/
 
 #afui.android select, #afui.android textarea, #afui.android input[type="text"],
 #afui.android input[type=search], #afui.android input[type="password"],
@@ -2083,8 +2083,8 @@ margin-bottom: 15px;
     border-top-color:inherit;
 }
 
-#afui.win8 .afScrollbar {background:white !important;}
-#afui.win8.light .afScrollbar {background:black !important;}
+/*#afui.win8 .afScrollbar {background:white !important;}
+#afui.win8.light .afScrollbar {background:black !important;}*/
 
 #afui.win8 select, #afui.win8 textarea, #afui.win8 input[type="text"], #afui.win8 input[type="search"], #afui.win8 input[type="password"], #afui.win8 input[type="datetime"], #afui.win8 input[type="datetime-local"], #afui.win8 input[type="date"], #afui.win8 input[type="month"], #afui.win8 input[type="time"], #afui.win8 input[type="week"], #afui.win8 input[type="number"], #afui.win8 input[type="email"], #afui.win8 input[type="url"], #afui.win8 input[type="tel"], #afui.win8 input[type="color"], #afui.win8 .input-group {
   	background:black;
@@ -3315,7 +3315,7 @@ margin-bottom: 15px;
     margin:8px;
 }
 /** This can be your default scrollbar class.  You must use !important to override the default inline styles */
-.scrollBar { 
+/*.scrollBar { 
     position: absolute !important;
     width: 5px !important;
     height: 20px !important;
@@ -3324,7 +3324,7 @@ margin-bottom: 15px;
     background: black !important;
     opacity: 0 !important;
 }
-	#afModalMask {
+	*/#afModalMask {
 		position:absolute;
 		top:0px;
 		left:0px;
