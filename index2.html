@@ -29,25 +29,19 @@
 
 
     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-   <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>-->
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 
      <script>
-      $(document).ready(function() {
+
+ $(document).ready(function() {
 
         if (!isTouchEvent && !_this.isAndroid) {
     if (event.preventDefault) event.preventDefault();
     else event.returnValue = false;
 }
 
-//$('.swiper-slide select').on('mousedown touchstart', function(e){
-  //e.stopPropagation()
-//});
 
-
-
-
-});
-
+   });
 
     $(document).bind("mobileinit", function(){
     $.mobile.allowCrossDomainPages = true;
@@ -98,7 +92,7 @@
             //var anchor = document.getElementById('stage1');
     //var id = $('#stage1').attr('id');
               
-             $('#stage1').append(  '   <div class="tag">  <img src= "'+jd[index].tag+'"></div>',' <a href= "detail.html?id=' +jd[index].id+ '">  <div class="article-img-pane">  <img src= "'+ jd[index].img +'"></div> </a>' ,'<a href= "detail.html?id=' +jd[index].id+ '"> <h2 style="text-transform:capitalize;font-size:14px;width:100%;font-weight:bold;">   ' + jd[index].what + ' @ ' + jd[index].location+'</h2> </a>',/*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/'<p style="font-size:12px;"> ' + jd[index].date+ ' at ' + jd[index].time+ '</p>' ,     ' <div class="liner"></div>');
+             $('#stage1').append(  '   <div class="tag">  <img src= "'+jd[index].tag+'"></div>',' <a href= "detail.html?id=' +jd[index].id+ '">  <div class="article-img-pane">  <img src= "'+ jd[index].img +'"></div> </a>' ,'<a href= "detail.html?id=' +jd[index].id+ '"> <h2 style="text-transform:capitalize;font-size:12px;width:100%;">   ' + jd[index].what + ' @ ' + jd[index].location+'</h2> </a>',/*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/'<p style="font-size:12px;"> ' + jd[index].date+ ' at ' + jd[index].time+ '</p>' ,     ' <div class="liner"></div>');
              //$('#stage2').append('<p>date : ' + jd[index].date+ '</p>');
              //$('#stage3').append('<p> Detail: ' + jd[index].detail+ '</p>');
         //$('#stage4').append('<p> Image: <img src= "'+jd[index].img+'"></p>');
@@ -381,8 +375,8 @@
  <input name="image" id="image" type="file" placeholder="hapnin image" />
  <br>
 
-            <input name="share_pin" id="sharepin" type="password" placeholder=" Share Pin" />
-            <!--<input name="password2" type="password" placeholder="confirm pin" />-->
+            <input name="share_pin" id="sharepin" type="password" placeholder="Share Pin" />
+            
            <input class="button block green" type="submit"  data-inline="true" value="Share" id="register" style="width:100%;">
         </form>
          <br>
@@ -535,7 +529,7 @@ $( 'form' )
 
 	
 	
-<!--<script src="js/jquery.min.js"></script>-->
+<script src="js/jquery.min.js"></script>
 	<!-- Don't forget to get the latest Swiper and scrollbar version here-->
 <script src="js/idangerous.swiper-2.0.min.js"></script>
 <script src="js/movies-app.js"></script>
