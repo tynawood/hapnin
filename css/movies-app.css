@@ -196,7 +196,7 @@ position:relative;
 
 
 
- form input[type=text]{
+ /*form input[type=text]{
     
    
         width:100%;
@@ -227,9 +227,220 @@ form input[type=time]{
      border-radius:5px ;
     
     
+}*/
+form select, form textarea, form input[type="text"],
+form input[type=search], form input[type="password"],
+form input[type="datetime"], form input[type="datetime-local"],
+form input[type="date"], form input[type="month"],
+form input[type="time"], form input[type="week"],
+form input[type="number"], form input[type="email"],
+form input[type="url"], form input[type="tel"],
+form input[type="color"],form input[type="file"], form .input-group {
+    background:inherit;
+    color:inherit;
 }
 
 
+form select,
+form textarea,
+form input[type="text"],
+form input[type=search],
+form input[type="password"],
+form input[type="datetime"],
+form input[type="datetime-local"],
+form input[type="date"],
+form input[type="month"],
+form input[type="time"],
+form input[type="week"],
+form input[type="number"],
+form input[type="email"],
+form input[type="url"],
+form input[type="tel"],
+form input[type="color"],
+form .input-group {  
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+}
+ form {
+  position: relative;
+}
+form input[type="radio"],
+form input[type="checkbox"] {
+  display: none;
+}
+form input[type="radio"] + label,
+form input[type="checkbox"] + label {
+  display: inline-block;
+  width: 60%;
+  float: right;
+  position: relative;
+  text-align: left;
+  padding: 10px 0 0 0;
+}
+form input[type="radio"]:not(.toggle) + label:before {
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  border-radius: 50px;
+  display: block;
+  position: absolute;
+  width: 1.3em;
+  height: 1.3em;
+  content: '';
+  margin-right: 5px;
+  top: 8px;
+  margin-left: -25px;
+}
+
+form textarea {
+  height: auto;
+}
+form .input-group {
+  width: auto;
+  height: auto;
+  padding: 12px;
+  overflow: hidden;
+}
+ .input-group input:not([type='button']):not([type='submit']),
+ .input-group textarea,
+ .input-group select {
+  margin-bottom: 0;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  box-shadow: none;
+}
+form .input-group input:not([type="submit"]):not([type="button"]):last-child,
+form .input-group textarea:last-child,
+form .input-group select:last-child {
+  border-bottom: none;
+}
+form .input-group input[type=button],
+form .input-group input[type=submit] {
+  margin: 5px;
+}
+form input.toggle + label:before,
+form input.toggle:checked + label:before {
+  content: attr(data-on);
+  position: absolute;
+  color: #fff;
+  left: 5px;
+  width: 42px;
+  text-align: left;
+  z-index: 3;
+  top: 3px;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  text-transform: uppercase;
+  display: none;
+}
+form input.toggle:checked + label:before {
+  display: block;
+}
+form input.toggle + label:after {
+  content: attr(data-off);
+  position: absolute;
+  color: #505050;
+  width: 42px;
+  text-align: left;
+  z-index: 1;
+  top: 2px;
+  left: 30px;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  text-transform: uppercase;
+}
+
+
+form input[type=button],
+form input[type=submit], form button {
+  font-size:inherit;
+} 
+form .button {
+
+	position:relative;
+	display:inline-block;
+	padding:8px 12px;
+	margin:8px 0;
+	font-weight:bold;
+	color:#000;
+	text-align:center;
+	vertical-align:top;
+	cursor:pointer;
+	background-color:#eee;
+	border:1px solid #666;
+	border-radius:6px;
+	/*box-shadow: 0 1px 0 #fff;*/
+
+	text-decoration: none;
+	z-index:2;
+}
+
+
+
+ .button-grouped { 
+    display:inline-block;
+    margin: 5px;
+}
+ .button-grouped * {
+	border-radius:0px;
+	float:left;
+	border-left:0px solid transparent;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	border-top: 1px solid #666;
+    margin:0;
+}
+ .button-grouped > .button:first-child {
+	border-left: 1px solid #666;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+ .button-grouped > .button:last-child {
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+ .button-grouped.flex {
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+}
+
+ .button-grouped.flex > .button {
+	-webkit-box-flex: 1;
+  	-moz-box-flex: 1 auto;
+  	-webkit-flex: 1 auto;
+  	-ms-flex: 1 auto;
+  	flex: 1 auto;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+.button.green {
+	color:#fff;
+	text-shadow:0 -1px 0 #666;
+	background:#009C0C;
+	border-color:#666;
+}
 
 
 .lighter .rounded { 
