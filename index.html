@@ -35,6 +35,16 @@
 
      <script>
       
+window.onload = function() {
+  var mySwiper = new Swiper('.swiper-container',{
+    //Your options here:
+
+    mode:'horizontal',
+    loop: true,
+    paginationClickable: true,
+    //etc..
+  });  
+}
 
 
     $(document).bind("mobileinit", function(){
