@@ -37,18 +37,18 @@
 
         $(document).ready(function() {
 
+            $('.swiper-slide select').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
+           $('.swiper-slide input').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
+           $('.swiper-slide textarea').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
 
-          $('.swiper-slide input').on('mousedown touchstart', function(e){
-  e.stopPropagation()
-})
 
-
-/*$('.swiper-slide input').on('MSPointerDown pointerdown MSPointerMove pointermove MSPointerUp pointerup', function(e){
-  e.stopPropagation();
-})*/
-
-
-          });
+           });
 
         </script>
 
