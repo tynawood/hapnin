@@ -1,7 +1,8 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
 xmlns:gap = "http://phonegap.com/ns/1.0"
-id = "com.inappshubhapnin"
-version = "1.0.0"></widget>
+id = "com.phonegap.helloworld"
+version = "1.0.0">
+<name>Hapnin</name>
 <description>
 hapnin is an event app that brings to you whats hapening in your location .
 </description>
@@ -77,7 +78,7 @@ permission on your app, which PhoneGap requires.
 
 
 <preference name="SplashScreen" value="splash" />
-    <preference name="SplashScreenDelay" value="1000" />
+    <preference name="SplashScreenDelay" value="10000" />
 <!-- Define app splash screen for each platform. -->
 <!--<gap:splash src="res/screen/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
     <gap:splash src="res/screen/android/screen-mdpi-portrait.png"  gap:platform="android" gap:density="mdpi" />
