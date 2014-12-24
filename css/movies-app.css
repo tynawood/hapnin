@@ -12,25 +12,8 @@ body {
 }
 
 
-
-
-              [contenteditable="true"] , input, textarea {
-        -webkit-user-select: auto !important;
-        -khtml-user-select: auto !important;
-        -moz-user-select: auto !important;
-        -ms-user-select: auto !important;
-        -o-user-select: auto !important;
-        user-select: auto !important;  
-  }
-    
-
-
-
-
-
-
 .header {
-	height: 50px;
+	height: 40px;
 	width: 100%;
 	background-color:#FFF;
 	/*background:url(../img/hapn%27n.png) no-repeat;*/
@@ -83,12 +66,12 @@ body {
 	bottom: 1px;
 	width: 100%;
 	background: #F4F4F4;
-	box-shadow: 3px 3px 3px #888888;
+	box-shadow: 2px 2px 2px #888888;
 	z-index:1;
 
 }
 .swiper-nav .swiper-slide {
-	width: 90px;
+	width: 50%;
 	height: 100%;
 	text-align: center;
 	position: relative;
@@ -116,7 +99,7 @@ body {
 	opacity: 0;
 }
 .swiper-nav .active-nav {
-	border-bottom:#662d91 3px solid;
+	border-bottom:#b34d9d 3px solid;
 	
 	
 	/*background: #bbb;
@@ -159,7 +142,8 @@ body {
 
 	color: #000;
 	text-align: center;
-	border-right: 1px solid #ccc;
+	
+
 }
 
 
@@ -577,14 +561,15 @@ margin:-8px -15px 0 -15px;
 
 .back{
 	background:#000;
-	width:35px;
-	height:35px;
+
+	width:30px;
+	height:30px;
 	float:left;
 	font-size:30px;
 	position:relative;
 	/*left:-28%;*/
 	color:#CCC;
-	margin-top:6px;
+	margin-top:5px;
 
 	
 	
@@ -621,14 +606,30 @@ margin:-8px -15px 0 -15px;
 	}
 
 
+	.boxers {
+  position: relative;
+  top: 120px;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  width: 100%;
+  height:230px;
+  background: white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+}
+
+h2 .hover{text-decoration: none;}
+
 .liner{
 	/*background: #000;
 	height: 100%;
 	/*margin-bottom: 20px;*/
-	border-bottom:3px #662d91 solid;
+	border-bottom:3px #b34d9d solid;
 	margin-top:-40px;
 	margin-bottom:0px;
-	box-shadow: 2px 2px 2px #888888;
+	box-shadow: 1px 1px 1px #888888;
 
 	/*position:relative;
 	top:-14px;
@@ -712,6 +713,13 @@ text-decoration: none;
 cursor: auto;
 }
 
+a:-webkit-any-link :hover{
+
+text-decoration: none;
+
+}
+
+
 
 .sale-tag {
 	 position: absolute;
@@ -726,3 +734,23 @@ cursor: auto;
 
 .imager{
 	height:200px;}
+.menu{
+  background: url(../img/menu.png);
+  width:30px;
+  height: 30px;
+  float:right;
+  font-size:30px;
+  position:relative;
+  /*left:-28%;*/
+  color:#CCC;
+  margin-left:10px;
+  margin-top: 3px;
+  cursor: pointer;
+  margin-right:0px;
+  
+  
+  
+  
+  
+  
+  }

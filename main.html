@@ -2,6 +2,12 @@
 <html lang="en">
 <html manifest="/cache.manifest">
 <head>
+
+
+
+
+
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1">
 	<title>Hapnin</title>
@@ -14,7 +20,7 @@
 
   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
     
-   
+    
 
 
 	
@@ -24,25 +30,25 @@
     <link type="text/css" rel="stylesheet" href="boot.min.css">
     
 	  <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+
+    <link rel="stylesheet" href="css/modal.css" media="screen" type="text/css" />
 	  <!---<script src="intelxdk.js"></script>
 <script src="xhr.js"></script>-->
 
 
     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    <!--<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>-->
+
+    
+
+
+
+
+
+
 
      <script>
-
- $(document).ready(function() {
-
-        if (!isTouchEvent && !_this.isAndroid) {
-    if (event.preventDefault) event.preventDefault();
-    else event.returnValue = false;
-}
-
-
-   });
-
     $(document).bind("mobileinit", function(){
     $.mobile.allowCrossDomainPages = true;
     });
@@ -50,49 +56,33 @@
    <script type="text/javascript" language="javascript">
 
 
-(function () {
-    var displayOnlineStatus = document.getElementById("online-status"),
-        isOnline = function () {
-            displayOnlineStatus.innerHTML = "Online";
-            displayOnlineStatus.className = "online";
-        },
-        isOffline = function () {
-            displayOnlineStatus.innerHTML = "Offline";
-            displayOnlineStatus.className = "offline";
-        };
-
-    if (window.addEventListener) {
-        /*
-            Works well in Firefox and Opera with the 
-            Work Offline option in the File menu.
-            Pulling the ethernet cable doesn't seem to trigger it.
-            Later Google Chrome and Safari seem to trigger it well
-        */
-        window.addEventListener("online", isOnline, false);
-        window.addEventListener("offline", isOffline, false);
-    }
-    else {
-        /*
-            Works in IE with the Work Offline option in the 
-            File menu and pulling the ethernet cable
-        */
-        document.body.ononline = isOnline;
-        document.body.onoffline = isOffline;
-    }
-})();
-
+    $('.swiper-slide select').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
+           $('.swiper-slide input').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
+           $('.swiper-slide textarea').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
 
    
    $(document).ready(function() {
 
       //$("#driver").click(function(event){
-          $.getJSON('http://ofmghonline.com/hapnin/getdata.php', function(jd) {
+          $.getJSON('getdata.php', function(jd) {
           $.each(jd, function(index, item){
 
             //var anchor = document.getElementById('stage1');
     //var id = $('#stage1').attr('id');
               
-             $('#stage1').append(  '   <div class="tag">  <img src= "'+jd[index].tag+'"></div>',' <a href= "detail.html?id=' +jd[index].id+ '">  <div class="article-img-pane">  <img src= "'+ jd[index].img +'"></div> </a>' ,'<a href= "detail.html?id=' +jd[index].id+ '"> <h2 style="text-transform:capitalize;font-size:12px;width:100%;">   ' + jd[index].what + ' @ ' + jd[index].location+'</h2> </a>',/*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/'<p style="font-size:12px;"> ' + jd[index].date+ ' at ' + jd[index].time+ '</p>' ,     ' <div class="liner"></div>');
+             $('#stage1').append(  '   <div class="tag">  <img src= "'+jd[index].tag+'"></div>',/*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/     ' <div class="boxers">  <a href= "detail.html?id=' +jd[index].id+ '"> <div class="article-img-pane" style="margin-bottom:10px;"><img src= "'+ jd[index].img +'" ></div></a><a href= "detail.html?id=' +jd[index].id+ '"><h2 style="text-transform:capitalize;font-size:14px;margin-bottom:10px;width:100%;"> ' + jd[index].what + ' @ ' + jd[index].location+'</h2></a><p style="font-size:14px;"> '+ jd[index].date+ ' at ' + jd[index].time+ '<p> </div>');
+
+
+
+
+
+
              //$('#stage2').append('<p>date : ' + jd[index].date+ '</p>');
              //$('#stage3').append('<p> Detail: ' + jd[index].detail+ '</p>');
         //$('#stage4').append('<p> Image: <img src= "'+jd[index].img+'"></p>');
@@ -113,11 +103,15 @@
 
 <body>
 <div id="header" class="header" style="display:none;width:0;height:0;"> </div>
-<div class="header" style="background:#fff;">
-
+<div class="header">
+<a href="settings.html"><div class="menu"></div></a>
 
 <img src="img/hapn'n.png" alt="1"/>
 </div>
+
+
+
+
 <div class="swiper-nav">
 
 		<div class="swiper-wrapper">
@@ -125,18 +119,18 @@
             
 			
 				
-				<div class="title">Hapnin</div>
+				<div class="title" style="border-right: 1px solid #ccc;">Hapnin</div>
 			</div>
 			<div class="swiper-slide">
 				
 				
 				<div class="title">Explore</div>
 			</div>
-			<div class="swiper-slide">
+			<!--<div class="swiper-slide">
 				
 				
 				<div class="title" style="border:none" >Share Hapnin</div>
-			</div>
+			</div>-->
 			
 			
 		</div>
@@ -149,13 +143,25 @@
 
 
 
-	<div class="swiper-container swiper-content" >
+	<div class="swiper-container swiper-content" style="overflow-y:auto;  ">
+
+
+
+
+<a href="sharehap.html">
+<button class="fancy-btn open"> </button>
+
+</a>
+
 		<div class="swiper-wrapper">
 			<div class="swiper-slide" style="overflow-y:auto;  ">
 				<div class="inner">
-          <div class="input-group" style="border:#fff;"><input type="test" name="password" class="form-control" required Placeholder="Check Hapnin With Location" style=
-            "font-size:15px;"  ><span
-                    class="input-group-btn"><input type="submit" value="Check"  class="btn btn-primary" style="height:34px;font-size:13px;margin-top:-0px;background:#682d91;border:#682d91;">Check</a></span></div>
+
+
+
+          <div class="input-group" style="border:#fff;"><input type="text" name="password" class="form-control" required Placeholder="Check Hapnin With Location" style=
+            "font-size:15px; "   ><span
+                    class="input-group-btn"><input type="submit" value="Check"  class="btn btn-primary" style="height:34px;font-size:13px;margin-top:-0px;background:#b34d9d;border:#682d91;">Check</a></span></div>
 <!--<div class="search">
 				 <div class="lighter">
 <form id="#search">
@@ -177,7 +183,16 @@
 <br>
 <div id="txtHint"><!--<b>Loading Today's Hapn'n..... </b>--></div>
 
-				<article id="stage1">
+				
+
+<!--<div class="boxers">
+
+
+</div>-->
+
+
+
+        <article id="stage1">
   
 
 
@@ -317,7 +332,7 @@
 					<div class="clearfix"></div>
 				
 			</div>
-			<div class="swiper-slide" style="overflow-y:auto;">
+		<!--	<div class="swiper-slide" style="overflow-y:auto;">
 				<div class="inner">
 
 
@@ -343,28 +358,28 @@
 
              <select name="tag" required=required>
                        <option value="" selected="selected">---Choose a Tag For what's Hapnin---</option>
-                                  <option value="http://ofmghonline.com/hapnin/tag/conference.png" >Conference/Seminar</option>
-                                  <option value="http://ofmghonline.com/hapnin/tag/competition.png">Competitions</option>
-                                   <option value="http://ofmghonline.com/hapnin/tag/workshop.png">Classes/Workshop</option>
-                                   <option value="http://ofmghonline.com/hapnin/tag/debates.png">Debates</option>
-                                    <option value="http://ofmghonline.com/hapnin/tag/fairs.png">Fairs</option>
-                                     <option value="http://ofmghonline.com/hapnin/tag/festivals.png">Festivals</option>
-                                      <option value="http://ofmghonline.com/hapnin/tag/fundraisers.png">Fundraisers</option>
-                                       <option value="http://ofmghonline.com/hapnin/tag/lunches.png">Lunches</option>
-                                        <option value="http://ofmghonline.com/hapnin/tag/meetings.png">Meetings/Networks</option>
-                                         <option value="http://ofmghonline.com/hapnin/tag/music.png">Music</option>
-                                          <option value="http://ofmghonline.com/hapnin/tag/movies.png">Movies</option>
-                                           <option value="http://ofmghonline.com/hapnin/tag/naming.png">Naming Ceremony</option>
-                                            <option value="http://ofmghonline.com/hapnin/tag/nightclub.png">Night Club</option>
-                                             <option value="http://ofmghonline.com/hapnin/tag/party.png">Party</option>
-                                              <option value="http://ofmghonline.com/hapnin/tag/performing.png">Performing Arts</option>
-                                               <option value="http://ofmghonline.com/hapnin/tag/Protests.png">Protests</option>
-                                                <option value="http://ofmghonline.com/hapnin/tag/political.png">Political</option>
-                                                 <option value="http://ofmghonline.com/hapnin/tag/premiers.png">Premiers</option>
+                                  <option value="http://hapnn.comxa.com/tag/conference.png" >Conference/Seminar</option>
+                                  <option value="http://hapnn.comxa.com/tag/competition.png">Competitions</option>
+                                   <option value="http://hapnn.comxa.com/tag/workshop.png">Classes/Workshop</option>
+                                   <option value="http://hapnn.comxa.com/tag/debates.png">Debates</option>
+                                    <option value="http://hapnn.comxa.com/tag/fairs.png">Fairs</option>
+                                     <option value="http://hapnn.comxa.com/tag/festivals.png">Festivals</option>
+                                      <option value="http://hapnn.comxa.com/tag/fundraisers.png">Fundraisers</option>
+                                       <option value="http://hapnn.comxa.com/tag/lunches.png">Lunches</option>
+                                        <option value="http://hapnn.comxa.com/tag/meetings.png">Meetings/Networks</option>
+                                         <option value="http://hapnn.comxa.com/tag/music.png">Music</option>
+                                          <option value="http://hapnn.comxa.com/tag/movies.png">Movies</option>
+                                           <option value="http://hapnn.comxa.com/tag/naming.png">Naming Ceremony</option>
+                                            <option value="http://hapnn.comxa.com/tag/nightclub.png">Night Club</option>
+                                             <option value="http://hapnn.comxa.com/tag/party.png">Party</option>
+                                              <option value="http://hapnn.comxa.com/tag/performing.png">Performing Arts</option>
+                                               <option value="http://hapnn.comxa.com/tag/Protests.png">Protests</option>
+                                                <option value="http://hapnn.comxa.com/tag/political.png">Political</option>
+                                                 <option value="http://hapnn.comxa.com/tag/premiers.png">Premiers</option>
                                                   <option value="reunion.png">Reunion</option>
-                                                   <option value="http://ofmghonline.com/hapnin/tag/sports.png">Sports</option>
-                                                    <option value="http://ofmghonline.com/hapnin/tag/theatre.png">Theatre</option>
-                                                     <option value="http://ofmghonline.com/hapnin/tag/university.png">University Events</option>
+                                                   <option value="http://hapnn.comxa.com/tag/sports.png">Sports</option>
+                                                    <option value="http://hapnn.comxa.com/tag/theatre.png">Theatre</option>
+                                                     <option value="http://hapnn.comxa.com/tag/university.png">University Events</option>
                                   
                                 
                      </select>
@@ -375,9 +390,9 @@
  <input name="image" id="image" type="file" placeholder="hapnin image" />
  <br>
 
-            <input name="share_pin" id="sharepin" type="password" placeholder="Share Pin" />
-            
-           <input class="button block green" type="submit"  data-inline="true" value="Share" id="register" style="width:100%;">
+            <input name="share_pin" id="sharepin" type="password" placeholder=" Share Pin" />
+            <!--<input name="password2" type="password" placeholder="confirm pin" />-->
+           <!--<input class="button block green" type="submit"  data-inline="true" value="Share" id="register" style="width:100%;">
         </form>
          <br>
         <p> <br> </p>
@@ -472,7 +487,7 @@
 $( 'form' )
   .submit( function() {
     $.ajax( {
-      url: 'http://ofmghonline.com/hapnin/share.php',
+      url: 'share.php',
       type: 'POST',
       data: new FormData( this ),
       processData: false,
@@ -529,13 +544,14 @@ $( 'form' )
 
 	
 	
-<script src="js/jquery.min.js"></script>
+<!--<script src="js/jquery.min.js"></script>-->
 	<!-- Don't forget to get the latest Swiper and scrollbar version here-->
 <script src="js/idangerous.swiper-2.0.min.js"></script>
 <script src="js/movies-app.js"></script>
 
 
-
+  
+  <script src="js/index.js"></script>
 
 
 </body>

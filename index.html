@@ -1,464 +1,78 @@
 <!doctype html>
 <html lang="en">
-<html manifest="/cache.manifest">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="initial-scale=1">
-  <title>Hapnin</title>
-
-  <link rel="stylesheet" href="css/idangerous.swiper.css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/movies-app.css">
-
-
-
-  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
-    
-   
-
-   
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1">
+	<title>Hapnin</title>
 
 	
-
-<script src="js/jquery-1.10.1.min.js">
-</script>
-    <link type="text/css" rel="stylesheet" href="boot.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	
     
-	  <link type="text/css" rel="stylesheet" href="css/style.css" />
-	  <!---<script src="intelxdk.js"></script>
-<script src="xhr.js"></script>-->
+    
+	  <script type="text/javascript">
 
 
-    <!--<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-   <!--<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>-->
+$(document).ready(function(){
+            setTimeout(function(){
+                navigator.splashscreen.hide();
+           },1500);
+        });
 
-           <script type="text/javascript">
-
-        $(document).ready(function() {
-
-            $('.swiper-slide select').on('mousedown touchstart MSPointerDown', function(e){
-           e.stopPropagation();
-   }); 
-           $('.swiper-slide input').on('mousedown touchstart MSPointerDown', function(e){
-           e.stopPropagation();
-   }); 
-           $('.swiper-slide textarea').on('mousedown touchstart MSPointerDown', function(e){
-           e.stopPropagation();
-   }); 
-
-
-           });
-
-        </script>
-
-        <script type="text/javascript">
-      
-
-
-    $(document).bind("mobileinit", function(){
-    $.mobile.allowCrossDomainPages = true;
-    });
- </script>
-   <script type="text/javascript" language="javascript">
-
-
-
-   $(document).ready(function() {
-
-      //$("#driver").click(function(event){
-          $.getJSON('http://ofmghonline.com/hapnin/getdata.php', function(jd) {
-          $.each(jd, function(index, item){
-
-            //var anchor = document.getElementById('stage1');
-    //var id = $('#stage1').attr('id');
-              
-             $('#stage1').append(  '   <div class="tag">  <img src= "'+jd[index].tag+'"></div>',' <a href= "detail.html?id=' +jd[index].id+ '">  <div class="article-img-pane">  <img src= "'+ jd[index].img +'"></div> </a>' ,'<a href= "detail.html?id=' +jd[index].id+ '"> <h2 style="text-transform:capitalize;font-size:14px;width:100%;font-weight:bold;">   ' + jd[index].what + ' @ ' + jd[index].location+'</h2> </a>',/*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/'<p style="font-size:12px;"> ' + jd[index].date+ ' at ' + jd[index].time+ '</p>' ,     ' <div class="liner"></div>');
-             //$('#stage2').append('<p>date : ' + jd[index].date+ '</p>');
-             //$('#stage3').append('<p> Detail: ' + jd[index].detail+ '</p>');
-        //$('#stage4').append('<p> Image: <img src= "'+jd[index].img+'"></p>');
-       
-          });
-      });
-   });
-   
-   
-  
-   </script>
+    </script>
 </head>
 
 
- 
+<body style="background:#ccc;">
+
+<video width="100%" height="auto" autoplay="true" >
+  <source src="hap.mp4" type="video/mp4">
+
+
+</video>
 
 
 
-<body>
-<div id="header" class="header" style="display:none;width:0;height:0;"> </div>
-<div class="header" style="background:#fff;">
-
-
-<img src="img/hapn'n.png" alt="1"/>
-</div>
-<div class="swiper-nav">
-
-		<div class="swiper-wrapper">
-			<div class="swiper-slide active-nav">
-            
-			
-				
-				<div class="title">Hapnin</div>
-			</div>
-			<div class="swiper-slide">
-				
-				
-				<div class="title">Explore</div>
-			</div>
-			<div class="swiper-slide">
-				
-				
-				<div class="title" style="border:none" >Share Hapnin</div>
-			</div>
-			
-			
-		</div>
-	</div>
   
 
 
 
 
 
-
-
-	<div class="swiper-container swiper-content" >
-		<div class="swiper-wrapper">
-			<div class="swiper-slide" style="overflow-y:auto;  ">
-				<div class="inner">
-         
-
-
-
-          <div class="input-group" style="border:#fff;"><input type="test" name="password" class="form-control" required Placeholder="Check Hapnin With Location" style=
-            "font-size:15px;"  ><span
-                    class="input-group-btn"><input type="submit" value="Check"  class="btn btn-primary" style="height:34px;font-size:13px;margin-top:-0px;background:#682d91;border:#682d91;">Check</a></span></div>
-<!--<div class="search">
-				 <div class="lighter">
-<form id="#search">
-	<span><input type="text" class="search rounded" placeholder="Search per Mood...">
-    <!--<input type="submit" style="background:url(img/search.png);width:42px;height:42px;margin-top:-10px;">-->
-   <!-- </span>
-	
-</form>
-
-</div>
-
-
-
-</div>-->
-						<div id="content" >
-                                
-                                
-         
-
-
-
-				<article id="stage1">
-  
-
-
-
-  <!-- <div id="stage2" style="background-color:blue;">
-         
-   </div>
-   <div id="stage3" style="background-color:blue;">
-          
-   </div>
-    </div>
-    <div id="stage4">
-   
-    
-    </div>-->
-			
-
-				</article>
-
-      <div style=" height:40px;"> </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-				
-				
-			</div>
-					<div class="clearfix"></div>
-				</div>
-			
-			
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			<div class="swiper-slide" style="overflow:scroll;">
-				<div class="inner">
-					
-					
-					<div class="browser-cat">C</div>
-                            <p><a href="conference.html">Conference/Seminars</a> </p>
-                            <div class="liner1"></div>
-                            
-                            <p>Competitions</p>
-                            <div class="liner1"></div>
-                            <p>Classes /Workshop</p>
-                            
-                            	<div class="browser-cat">D</div>
-                            <p>Debates</p>
-                           
-                           
-                           <div class="browser-cat">F</div>
-                           
-                           <p>Festivals</p>
-                           <div class="liner1"></div>
-                           <p>Fairs</p>
-                           <div class="liner1"></div>
-                           <p>Fundraisers</p>
-                           
-                           
-                           <div class="browser-cat">L</div>
-                           <p>Lauches</p>
-                           
-                           
-                           
-                           <div class="browser-cat">M</div>
-                           <p>Meetings/Networking</p>
-                           <div class="liner1"></div>
-                           <p>Music</p>
-                           <div class="liner1"></div>
-                           <p>Movies</p>
-                           
-                           <div class="browser-cat">N</div>
-                           <p>Naming Ceremony</p>
-                           <p>Night Club</p>
-                           
-                           
-                           <div class="browser-cat">P</div>
-                           <p>Parties</p>
-                           <div class="liner1"></div>
-                           <p>Premiers</p>
-                           <div class="liner1"></div>
-                           <p>Performing Arts</p>
-                           <div class="liner1"></div>
-                           <p>Protests</p>
-                           <div class="liner1"></div>
-                           <p>Political</p>
-                           
-                           <div class="browser-cat">R</div>
-                           <p>Reuniouns</p>
-                           
-                           <div class="browser-cat">S</div>
-                           <p>Sports</p>
-                           
-                           <div class="browser-cat">U</div>
-                           <p>University Events</p></div>
-					<div class="clearfix"></div>
-				
-			</div>
-			<div class="swiper-slide" style="overflow-y:auto;">
-				<div class="inner">
-
-
-
-
-            <div style="text-align:center">
-            
-            <p><a href="regpin.html" style="color:#0088D1;">Get a Share Pin If you dont have one!</a></p>
-          
-            
-             <p><a href="recovery.html" style="color:#0088D1;">Recover Share Pin!</a></p>
-            
-            </div>
-          
-                <form method="post"  enctype="multipart/form-data">
-            <input name="what_hapnn" id="whathapnn" type="text" placeholder="What's Hapnin in your world......? " />
-            <input name="location" id="location" type="text" placeholder="Location...." />
-            <input name="date" id="date" type="date" placeholder="mm/dd/yyyy" />
-
-
-            <input name="time" id="time" type="time" pattern="11:00 Am" />
-
-
-             <select name="tag" required=required>
-                       <option value="" selected="selected">---Choose a Tag For what's Hapnin---</option>
-                                  <option value="http://ofmghonline.com/hapnin/tag/conference.png" >Conference/Seminar</option>
-                                  <option value="http://ofmghonline.com/hapnin/tag/competition.png">Competitions</option>
-                                   <option value="http://ofmghonline.com/hapnin/tag/workshop.png">Classes/Workshop</option>
-                                   <option value="http://ofmghonline.com/hapnin/tag/debates.png">Debates</option>
-                                    <option value="http://ofmghonline.com/hapnin/tag/fairs.png">Fairs</option>
-                                     <option value="http://ofmghonline.com/hapnin/tag/festivals.png">Festivals</option>
-                                      <option value="http://ofmghonline.com/hapnin/tag/fundraisers.png">Fundraisers</option>
-                                       <option value="http://ofmghonline.com/hapnin/tag/lunches.png">Lunches</option>
-                                        <option value="http://ofmghonline.com/hapnin/tag/meetings.png">Meetings/Networks</option>
-                                         <option value="http://ofmghonline.com/hapnin/tag/music.png">Music</option>
-                                          <option value="http://ofmghonline.com/hapnin/tag/movies.png">Movies</option>
-                                           <option value="http://ofmghonline.com/hapnin/tag/naming.png">Naming Ceremony</option>
-                                            <option value="http://ofmghonline.com/hapnin/tag/nightclub.png">Night Club</option>
-                                             <option value="http://ofmghonline.com/hapnin/tag/party.png">Party</option>
-                                              <option value="http://ofmghonline.com/hapnin/tag/performing.png">Performing Arts</option>
-                                               <option value="http://ofmghonline.com/hapnin/tag/Protests.png">Protests</option>
-                                                <option value="http://ofmghonline.com/hapnin/tag/political.png">Political</option>
-                                                 <option value="http://ofmghonline.com/hapnin/tag/premiers.png">Premiers</option>
-                                                  <option value="reunion.png">Reunion</option>
-                                                   <option value="http://ofmghonline.com/hapnin/tag/sports.png">Sports</option>
-                                                    <option value="http://ofmghonline.com/hapnin/tag/theatre.png">Theatre</option>
-                                                     <option value="http://ofmghonline.com/hapnin/tag/university.png">University Events</option>
-                                  
-                                
-                     </select>
-
-
-                     <textarea name="detail" id="detail" placeholder="Hapnin Detail..."  rows="5"></textarea>
-
- <input name="image" id="image" type="file" placeholder="hapnin image" />
- <br>
-
-            <input name="share_pin" id="sharepin" type="password" placeholder=" Share Pin" />
-            <!--<input name="password2" type="password" placeholder="confirm pin" />-->
-           <input class="button block green" type="submit"  data-inline="true" value="Share" id="register" style="width:100%;">
-        </form>
-         <br>
-        <p> <br> </p>
-        
-        </div>
-    </div>
-       
-       
-				
-                                   
-                               
-								<p> <br> </p>
-					<div class="clearfix"></div>
-				</div>
-
-
-
-
-
-
-			</div>
-			
-		</div>
-</div>
-
-<script type="text/javascript">
-
-
-$( 'form' )
-  .submit( function() {
-    $.ajax( {
-      url: 'http://ofmghonline.com/hapnin/share.php',
-      type: 'POST',
-      data: new FormData( this ),
-      processData: false,
-      contentType: false,
-
-
-      success: function(FormData){
-           // console.log(data);
-            alert('Sharing sucessful');
-            //window.location.href = "index.html";
-        },
-
-        error: function(FormData){
-            //console.log(data);
-            alert('Sharing unsuccessfully ');
-           // window.location.href = "index.html";
-        }
-        
-   
-
-    } );
-   
-   
-  } );
-    
-/*$('form').submit( function() {
-    var postData = $(this).serialize();
-    
-    $.ajax({
-        type: 'POST',
-       data: postData,
-        url: 'share.php',
-        
-        success: function(data){
-            console.log(data);
-            alert('Hapnin Was Shared successfully ');
-            window.location.href = "index.html";
-        },
-        error: function(data){
-            console.log(data);
-            alert('Sharing Unsucessful');
-            window.location.href = "index.html";
-        });
-
-
-   
-    
-    return false;
-});
-    
-    */
-
-        </script>
+ <script>
+ setTimeout(function () {
+       window.location = "main.html"; //will redirect to your blog page (an ex: blog.html)
+    }, 6000);
+     
+   </script>
 
 	
-	
+
+
+
+			
+
 <script src="js/jquery.min.js"></script>
 	<!-- Don't forget to get the latest Swiper and scrollbar version here-->
 <script src="js/idangerous.swiper-2.0.min.js"></script>
 <script src="js/movies-app.js"></script>
 
-
-
-
-
+    
+    <!-- <script>
+  var tabsSwiper = new Swiper('.swiper-container',{
+    onlyExternal : true,
+    speed:500
+  })
+  $(".tabs a").on('touchstart mousedown',function(e){
+    e.preventDefault()
+    $(".tabs .active").removeClass('active')
+    $(this).addClass('active')
+    tabsSwiper.swipeTo( $(this).index() )
+  })
+  $(".tabs a").click(function(e){
+    e.preventDefault()
+  })
+  </script>-->
+  
 </body>
 </html>

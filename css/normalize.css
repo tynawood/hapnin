@@ -352,7 +352,6 @@ figure {
 
 form {
     margin: 0;
-    -webkit-user-select: auto important; 
 }
 
 /*
@@ -393,7 +392,6 @@ textarea {
     margin: 0; /* 2 */
     vertical-align: baseline; /* 3 */
     *vertical-align: middle; /* 3 */
-    -webkit-user-select: auto important; 
 }
 
 /*
@@ -423,7 +421,6 @@ input[type="submit"] {
     -webkit-appearance: button; /* 2 */
     cursor: pointer; /* 3 */
     *overflow: visible;  /* 4 */
-     -webkit-user-select: auto important; 
 }
 
 /*
@@ -481,7 +478,6 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
     border: 0;
     padding: 0;
-    -webkit-user-select: auto important; 
 }
 
 /*
@@ -492,7 +488,6 @@ input::-moz-focus-inner {
 textarea {
     overflow: auto; /* 1 */
     vertical-align: top; /* 2 */
-    -webkit-user-select: auto important; 
 }
 
 /* ==========================================================================

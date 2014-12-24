@@ -44,14 +44,14 @@
    
 //var id = $('#stage1').attr('id');
      // $("#2").click(function(event){
-          $.getJSON('http://ofmghonline.com/hapnin/detail.php?id='+id, function(jd) {  
+          $.getJSON('detail.php?id='+id, function(jd) {  
        $('#stage1').append('<div>  <img class="imagesizer" src= "'+jd.img+'"></div>');
      
             
              // $('#stage3').append('<p>  <img class="imagesizer" src= "'+jd.img+'"></p>');
             // $('#stage2').append('<p>Age : ' + jd.age+ '</p>');
              //$('#stage3').append('<p> Sex: ' + jd.sex+ '</p>');
-                 $('#stage2').append('<p>  ' + jd.what + '</p>');
+                 $('#stage2').append('<p style="margin-top:-45px;">  ' + jd.what + '</p>');
              $('#stage3').append('<p > ' + jd.date+ ' at ' + jd.time+ ' | Venue:' + jd.location+'</p>');
                // $('#stage4').append('<p> ' + jd.location+ '</p>');
                  //  $('#stage5').append('<p> ' + jd.time+ '</p>');
@@ -78,7 +78,7 @@
 			<div class="header">
 <a href="index.html"><div class="back"></div></a>
 
-<img src="img/hapn'n.png" alt="1"/>
+
 </div>
 			<div id="content">
 			
@@ -108,10 +108,11 @@
 					
 						
 						
-				
-          <div class="but">
-          	<div class="divider"></div>
-      </div>
+				<form>
+         <input class="button block green" type="submit"  data-inline="true" value="Share Event" id="register" style="width:100%;">
+         <br>
+         <input class="button block green" type="submit"  data-inline="true" value="Red Flag Event" id="register" style="width:100%;color:#f10d02">
+     </form>
 				</article>
                 
               
