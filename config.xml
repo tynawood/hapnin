@@ -53,7 +53,7 @@ permission on your app, which PhoneGap requires.
 <gap:plugin name="org.apache.cordova.inappbrowser" />
 <gap:plugin name="org.apache.cordova.media" />
 <gap:plugin name="org.apache.cordova.network-information" />
-<gap:plugin name="org.apache.cordova.splashscreen" />
+<!--<gap:plugin name="org.apache.cordova.splashscreen" />-->
 <gap:plugin name="org.apache.cordova.vibration" />
 <!-- Third party plugins -->
 <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
@@ -77,8 +77,8 @@ permission on your app, which PhoneGap requires.
 <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone" gap:role="background" />
 
 
-<preference name="SplashScreen" value="splash" />
-    <preference name="SplashScreenDelay" value="1000" />
+<!--<preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="1000" />-->
 <!-- Define app splash screen for each platform. -->
 <!--<gap:splash src="res/screen/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
     <gap:splash src="res/screen/android/screen-mdpi-portrait.png"  gap:platform="android" gap:density="mdpi" />
