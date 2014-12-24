@@ -1,8 +1,7 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
 xmlns:gap = "http://phonegap.com/ns/1.0"
-id = "com.phonegap.helloworld"
+id = "com.inappshubhapnin"
 version = "1.0.0">
-<name>Hapnin</name>
 <description>
 hapnin is an event app that brings to you whats hapening in your location .
 </description>
