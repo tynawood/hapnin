@@ -78,7 +78,7 @@ permission on your app, which PhoneGap requires.
 
 
 <preference name="SplashScreen" value="splash" />
-    <preference name="SplashScreenDelay" value="1000" />
+    <preference name="SplashScreenDelay" value="500" />
 <!-- Define app splash screen for each platform. -->
 <!--<gap:splash src="res/screen/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
     <gap:splash src="res/screen/android/screen-mdpi-portrait.png"  gap:platform="android" gap:density="mdpi" />
