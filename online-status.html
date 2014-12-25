@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <script>
+      var alertOnlineStatus = function() {
+        window.alert(navigator.onLine ? 'online' : 'You Are not connected to the internet ,check your internet connection');
+      };
+
+      window.addEventListener('online',  alertOnlineStatus);
+      window.addEventListener('offline',  alertOnlineStatus);
+
+      alertOnlineStatus();
+    </script>
+  </body>
+</html>

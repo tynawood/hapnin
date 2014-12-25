@@ -32,7 +32,20 @@
     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
     <!--<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>-->
 
-     
+   <script type="text/javascript" language="javascript">
+$(document).ready(function(){
+
+    $('.swiper-slide select').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
+           $('.swiper-slide input').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
+           $('.swiper-slide textarea').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
+});
+   </script>  
 </head>
 
 <style>
@@ -304,24 +317,36 @@
 
 <script type="text/javascript">
     
-$('form').submit(function(){
-    var postData = $(this).serialize();
-    
-    $.ajax({
-        type: 'POST',
-        data: postData,
-        url: 'regpin.php',
-        success: function(data){
-            console.log(data);
-            alert('Your Share Pin Was Created Successfully ');
-            window.location.href = "index.html";
+
+$( 'form' )
+  .submit( function() {
+    $.ajax( {
+      url: 'share.php',
+      type: 'POST',
+      data: new FormData( this ),
+      processData: false,
+      contentType: false,
+
+
+      success: function(FormData){
+           // console.log(data);
+            alert('Sharing sucessful');
+            //window.location.href = "index.html";
         },
-        error: function(){
-            console.log(data);
-            alert('There was an error Creating your pin');
-            window.location.href = "regpin.html";
+
+        error: function(FormData){
+            //console.log(data);
+            alert('Sharing unsuccessfully ');
+           // window.location.href = "index.html";
         }
-    });
+        
+   
+
+    } );
+   
+   
+  } );
+    
     
     return false;
 });
