@@ -76,7 +76,8 @@ margin:-8px -15px 0 -15px;
 .header {
 	height: 40px;
 	width: 100%;
-	background:transparent;
+	background-color:#0288d1;
+	/*background:transparent;*/
 	/*background:url(../img/hapn%27n.png) no-repeat;*/
 	position:relative;
 	z-index: 1000;
@@ -96,14 +97,14 @@ margin:-8px -15px 0 -15px;
 
 .back{
 	background: url(../img/back.png);
-	width:35px;
-	height: 35px;
+	width:52px;
+	height: 30px;
 	float:left;
 	font-size:30px;
 	position:relative;
 	/*left:-28%;*/
 	color:#CCC;
-	margin-left:10px;
+	margin-left:0px;
 	cursor: pointer;
 	
 	
@@ -113,7 +114,27 @@ margin:-8px -15px 0 -15px;
 	
 	}
 	
-	
+	 .menu{
+  background: url(../img/menu.png);
+  width:30px;
+  height: 30px;
+  float:right;
+  font-size:30px;
+  position:relative;
+  /*left:-28%;*/
+  color:#CCC;
+  margin-left:10px;
+  margin-top: 3px;
+  cursor: pointer;
+  margin-right:0px;
+  
+  
+  
+  
+  
+  
+  }
+  
 	
 	
 	.tag{
@@ -389,7 +410,7 @@ article .article-img-pane img { height:100%; max-width: inherit; }
 				}
 				
 				.imagesizer{
-					height:40%; width:100%; display: block; margin-bottom: 10px; position: relative;margin-right: 5px;top:-43px;
+					height:300px; width:96%; display: block; margin-bottom: 10px; position: relative;margin-right: 5px;top:0px;margin-left: 6px;
 
 					
 					}		
@@ -406,3 +427,44 @@ article .article-img-pane img { height:100%; max-width: inherit; }
 							.divider{width:50%;
 								border-right: 2px #ccc solid;
 								height:60px;}
+
+
+
+
+								.detailbox{background:#fff;
+									box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+
+									font-size:14px ;  text-transform:capitalize;margin-bottom:0px;width:96%;position:relative;margin-left: 6px;color:#514f4f;height: auto}
+
+									.detailbox p{margin-left: 5px;
+
+
+									}
+
+								.detailbox strong{
+font-weight: normal;
+font-size: 14px;
+
+
+								}
+
+
+
+
+
+									.detailbox2{background:#fff;
+									box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+
+									font-size:14px ;  text-transform:capitalize;margin-bottom:0px;width:96%;position:relative;margin-left: 6px;color:#514f4f;height: auto;}
+
+									.detailbox2 p{margin-left: 5px;
+
+
+									}
+
+								.detailbox2 strong{
+font-weight: normal;
+font-size: 14px;
+
+
+								}

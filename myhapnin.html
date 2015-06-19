@@ -69,18 +69,18 @@
    
    $(document).ready(function() {
 
+
+    
+    var share_pin= window.location.search.substring(11);
+
       //$("#driver").click(function(event){
-          $.getJSON('http://ofmghonline.com/samples/hapnin/getdata.php', function(jd) {
-          
-
-
-
+    $.getJSON('http://ofmghonline.com/samples/hapnin/event.php?share_pin='+share_pin, function(jd) { 
           $.each(jd, function(index, item){
 
             //var anchor = document.getElementById('stage1');
     //var id = $('#stage1').attr('id');
               
-             $('#stage1').append(  '   <div class="tag">  <img src= "'+jd[index].tag+'"></div>',/*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/     ' <div class="boxers">  <a href= "detail.html?id=' +jd[index].id+ '"> <div class="article-img-pane" style="margin-bottom:10px;"><img src= "'+ jd[index].img +'" ></div></a><a href= "detail.html?id=' +jd[index].id+ '"><h2 style="text-transform:capitalize;font-weight:bold;margin-bottom:10px;width:100%;color:#00acef;height:10%"> ' + jd[index].what + ' </h2></a><p style="font-size:14px;color:#514f4f;font-weight:normal;">  <img style="width:11px;height:15px;margin-left:5px" src="img/loc.png"/> ' + jd[index].location+'  <img style="width:15px;height:15px;margin-left:5px" src="img/cal.png"/>'+ jd[index].date+ ' <img style="width:15px;height:15px;margin-left:5px" src="img/time.png"/>' + jd[index].time+ '<p> </div>');
+             $('#stage1').append(  '   <div class="tag">    <img src= "'+jd[index].tag+'"> </div>  <form action="sharehap.html"><input class="button block green" type="submit"  data-inline="true" value="Edit Hapnin" id="register" style="width:100%;position:relative;top:270px"></form>',/*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/     ' <div class="boxers">  <a href= "detail.html?id=' +jd[index].id+ '"> <div class="article-img-pane" style="margin-bottom:10px;"><img src= "'+ jd[index].img +'" ></div></a><a href= "detail.html?id=' +jd[index].id+ '"><h2 style="text-transform:capitalize;font-weight:bold;margin-bottom:10px;width:100%;color:#00acef;height:10%"> ' + jd[index].what + ' </h2></a><p style="font-size:14px;color:#514f4f;font-weight:normal;">  <img style="width:11px;height:15px;margin-left:5px" src="img/loc.png"/> ' + jd[index].location+'  <img style="width:15px;height:15px;margin-left:5px" src="img/cal.png"/>'+ jd[index].date+ ' <img style="width:15px;height:15px;margin-left:5px" src="img/time.png"/>' + jd[index].time+ ' <p> </div>');
 
 
 
@@ -92,13 +92,9 @@
         //$('#stage4').append('<p> Image: <img src= "'+jd[index].img+'"></p>');
        
           });
-
-      },function(){
-        alert("An error Ovcc");
       });
-
    });
-  
+   
    
   
    </script>
@@ -107,7 +103,7 @@
 
    $(document).ready(function() {
    setTimeout(function() {
-    $('#loader').fadeOut('slow');
+    $('#loader').fadeOut('fast');
 }, 100);
 });
    </script>
@@ -136,7 +132,7 @@ $(window).load(function() {
 <div class="header">
 <a href="settings.html"><div class="menu"></div></a>
 
-<img src="img/hapn'n.png" alt="1"/>
+<a href="index.html"><img src="img/hapn'n.png" alt="1"/></a>
 </div>
 
 
@@ -173,7 +169,7 @@ $(window).load(function() {
 
 
 
-	<div class="swiper-container swiper-content" style=" ">
+	<div class="swiper-container swiper-content" style="overflow-y:auto;  ">
 
 
 
@@ -198,9 +194,9 @@ $(window).load(function() {
 
 
 
-          <div class="input-group" style="border:#fff;"><input type="text" name="password" class="form-control" required Placeholder="Check Hapnin With Location" style=
+          <!--<div class="input-group" style="border:#fff;"><input type="text" name="password" class="form-control" required Placeholder="Check Hapnin With Location" style=
             "font-size:15px; "   ><span
-                    class="input-group-btn"><input type="submit" value="Check"  class="btn btn-primary" style="height:34px;font-size:13px;margin-top:-0px;background:#0288d1;border:#682d91;">Check</a></span></div>
+                    class="input-group-btn"><input type="submit" value="Check"  class="btn btn-primary" style="height:34px;font-size:13px;margin-top:-0px;background:#0288d1;border:#682d91;">Check</a></span></div>-->
 <!--<div class="search">
 				 <div class="lighter">
 <form id="#search">
@@ -215,12 +211,12 @@ $(window).load(function() {
 
 
 </div>-->
-					
+						<div id="content" >
                                 
                                 
          
 <br>
-
+<div id="txtHint"><!--<b>Loading Today's Hapn'n..... </b>--></div>
 
 				
 
@@ -231,7 +227,7 @@ $(window).load(function() {
 
 
 
-        <article id="stage1">
+        <article id="stage1" style="margin-top:-100px;" >
 
       
   
@@ -249,11 +245,11 @@ $(window).load(function() {
    
     
     </div>-->
-			
-
+   
 				</article>
+ 
+      <div style=" height:100px;"> </div>
 
-      <div style=" height:40px;"> </div>
 
 
 
@@ -285,9 +281,8 @@ $(window).load(function() {
 
 
 </div>
-
 				
-				</div>
+				
 			</div>
 					<div class="clearfix"></div>
 				</div>
@@ -312,239 +307,8 @@ $(window).load(function() {
 			<div class="swiper-slide" style="overflow:scroll;">
 				<div class="inner">
 					
-		<div class="detailbox2">
-      <img class="icon" src="tag/c.png" alt=""/>
-<p><br> </p>
-
-<a href=""><div class="detailbox1">
-      <p>Conference/Seminars  </p>
-
-  </div> </a>
-  
-
-
-
-<a href=""><div class="detailbox1">
-      <p>Competitions  </p>
-
-  </div> </a>
-
-  <a href=""><div class="detailbox1">
-      <p>Classes /Workshop  </p>
-
-  </div> </a>
-
-   <a href=""><div class="detailbox1">
-      <p>Charity  </p>
-
-  </div> </a>
-  <p> </p>
-<p><br> </p>
-  </div> 
-
-
-
-
-  <div class="detailbox2">
-      <img class="icon" src="tag/d.png" alt=""/>
-<p><br> </p>
-
-<a href=""><div class="detailbox1">
-      <p>Debates </p>
-
-  </div> </a>
-  
-<p><br> </p>
-  </div> 
-
-
-
-      <div class="detailbox2">
-      <img class="icon" src="tag/f.png" alt=""/>
-<p><br> </p>
-
-<a href=""><div class="detailbox1">
-      <p>Festivals  </p>
-
-  </div> </a>
-  
-
-
-
-<a href=""><div class="detailbox1">
-      <p>Fairs  </p>
-
-  </div> </a>
-
-  <a href=""><div class="detailbox1">
-      <p>Fundraisings  </p>
-
-  </div> </a>
-  <p> </p>
-<p><br> </p>
-  </div> 
-
-
-
-
-  <div class="detailbox2">
-      <img class="icon" src="tag/l.png" alt=""/>
-<p><br> </p>
-
-<a href=""><div class="detailbox1">
-      <p>Lauches  </p>
-
-  </div> </a>
-  
-
-
-
-
-<p><br> </p>
-  </div> 
-
-
-
-   <div class="detailbox2">
-      <img class="icon" src="tag/m.png" alt=""/>
-<p><br> </p>
-
-<a href=""><div class="detailbox1">
-      <p>Meetings/Networking </p>
-
-  </div> </a>
-
-
-  <a href=""><div class="detailbox1">
-      <p>Music </p>
-
-  </div> </a>
-
-
-  <a href=""><div class="detailbox1">
-      <p>Movies </p>
-
-  </div> </a>
-  
-
-
-
-
-<p><br> </p>
-  </div> 
-
-
-
- <div class="detailbox2">
-      <img class="icon" src="tag/n.png" alt=""/>
-<p><br> </p>
-
-<a href=""><div class="detailbox1">
-      <p>Night Club </p>
-
-  </div> </a>
-
-
- 
-  
-
-
-
-
-<p><br> </p>
-  </div> 
-
-
-<div class="detailbox2">
-      <img class="icon" src="tag/o.png" alt=""/>
-<p><br> </p>
-
-<a href=""><div class="detailbox1">
-      <p>Others </p>
-
-  </div> </a>
-
-
- 
-
-
-
-<p><br> </p>
-  </div> 
-
-
-
-
-
-  <div class="detailbox2">
-      <img class="icon" src="tag/p.png" alt=""/>
-<p><br> </p>
-
-<a href=""><div class="detailbox1">
-      <p>Parties </p>
-
-  </div> </a>
-<a href=""><div class="detailbox1">
-      <p>Premiers </p>
-
-  </div> </a>
-
-<a href=""><div class="detailbox1">
-      <p>Performing Arts </p>
-
-  </div> </a>
-
- 
-  <a href=""><div class="detailbox1">
-      <p>Protests </p>
-
-  </div> </a>
-
-
-
-
-<p><br> </p>
-  </div> 
-
-
-
-<div class="detailbox2">
-      <img class="icon" src="tag/r.png" alt=""/>
-<p><br> </p>
-
-<a href=""><div class="detailbox1">
-      <p>Reuniouns </p>
-
-  </div> </a>
-
-
- 
-
-
-
-<p><br> </p>
-  </div> 
-
-
-<div class="detailbox2">
-      <img class="icon" src="tag/s.png" alt=""/>
-<p><br> </p>
-
-<a href=""><div class="detailbox1">
-      <p>Sports & Fitness </p>
-
-  </div> </a>
-
-
- 
-
-
-
-<p><br> </p>
-  </div> 
-
-
-					<!--<div class="browser-cat">C</div>
+					
+					<div class="browser-cat">C</div>
                             <p><a href="conference.html">Conference/Seminars</a> </p>
                             <div class="liner1"></div>
                             
@@ -600,7 +364,7 @@ $(window).load(function() {
                            <p>Sports</p>
                            
                            <div class="browser-cat">U</div>
-                           <p>University Events</p></div>-->
+                           <p>University Events</p></div>
 					<div class="clearfix"></div>
 				
 			</div>
@@ -753,66 +517,18 @@ $(window).load(function() {
 		</div>
 </div>
 
-<script type="text/javascript">
 
-
-$( 'form' )
-  .submit( function() {
-    $.ajax( {
-      url: 'http://ofmghonline.com/samples/hapnin/share.php',
-      type: 'POST',
-      data: new FormData( this ),
-      processData: false,
-      contentType: false,
-
-
-      success: function(FormData){
-           // console.log(data);
-            alert('Sharing sucessful');
-            //window.location.href = "index.html";
-        },
-
-        error: function(FormData){
-            //console.log(data);
-            alert('Sharing unsuccessfully ');
-           // window.location.href = "index.html";
-        }
-        
-   
-
-    } );
+     
    
    
-  } );
-    
-/*$('form').submit( function() {
-    var postData = $(this).serialize();
-    
-    $.ajax({
-        type: 'POST',
-       data: postData,
-        url: 'share.php',
-        
-        success: function(data){
-            console.log(data);
-            alert('Hapnin Was Shared successfully ');
-            window.location.href = "index.html";
-        },
-        error: function(data){
-            console.log(data);
-            alert('Sharing Unsucessful');
-            window.location.href = "index.html";
-        });
+ 
 
 
    
     
-    return false;
-});
+   
     
-    */
-
-        </script>
+    
 
 	
 	

@@ -35,7 +35,7 @@
   color: #FFF;
   border-radius: 50%;
   left: 80%;
-  background: #F2594B url(../img/edit.png) no-repeat;
+  background: #0288d1 url(../img/edit.png) no-repeat;
 
   text-decoration: none;
   -moz-transform: translateY(-50%);
@@ -47,7 +47,7 @@
  
 }
 .fancy-btn:hover {
-  background-color: #f46f63;
+  background-color: #0287d1;
     text-decoration: none;
 }
 

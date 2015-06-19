@@ -15,12 +15,13 @@ body {
 .header {
 	height: 40px;
 	width: 100%;
-	background-color:#FFF;
+	background-color:#0288d1;
 	/*background:url(../img/hapn%27n.png) no-repeat;*/
 	position:relative;
 
 	/*left:30%;*/
-	border-bottom:1px #ccc solid;
+
+	z-index: 1000;
 	
 	/*background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#111));
 	background-image: -webkit-linear-gradient(top, #333, #111);
@@ -65,7 +66,8 @@ body {
 	left: 0;
 	bottom: 1px;
 	width: 100%;
-	background: #F4F4F4;
+	background: #0288d1;
+	font-color:#fff;
 	box-shadow: 2px 2px 2px #888888;
 	z-index:1;
 
@@ -99,7 +101,7 @@ body {
 	opacity: 0;
 }
 .swiper-nav .active-nav {
-	border-bottom:#b34d9d 3px solid;
+	border-bottom:#fff 2px solid;
 	
 	
 	/*background: #bbb;
@@ -140,7 +142,7 @@ body {
 	display:block;
 	line-height: 50px;
 
-	color: #000;
+	color: #fff;
 	text-align: center;
 	
 
@@ -584,18 +586,19 @@ margin:-8px -15px 0 -15px;
 	
 	.tag{
 		width:100%;
-		height:20px;
+		height:50px;
 		/*background:#CCC;*/
 		box-shadow:#000 inset;
-		
-		
-		color:#F00;
+		float: left;
+	
+		color:#000;
+		line-height: 50px;
+	
 		
 		
 		
 		
 		}
-
 .liner1{
 	border-bottom:1px #ccc solid;
 	margin-top:10px;
@@ -620,7 +623,14 @@ margin:-8px -15px 0 -15px;
 
 }
 
-h2 .hover{text-decoration: none;}
+a:-webkit-any-link {
+color: #000;
+text-decoration: none;
+cursor: auto;
+}
+
+
+/*h2 .hover{text-decoration: none;}*/
 
 .liner{
 	/*background: #000;
@@ -702,7 +712,72 @@ h2 .hover{text-decoration: none;}
 					
 					
 					
-					}	
+					}
+
+
+
+
+
+					.detailbox1{background:#fff;
+									box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+
+									font-size:14px ;  text-transform:capitalize;margin-bottom:0px;width:95%;position:relative;margin-left: 15px;margin-top:10px;color:#514f4f;height: 40px;}
+
+									.detailbox1 p{margin-left: 5px;text-align: center;line-height: 40px;font-size: 16px;
+
+
+									}
+
+								.detailbox1 strong{
+font-weight: normal;
+font-size: 14px;
+
+
+								}
+
+
+	
+
+
+
+.detailbox2{background:#fff;
+									box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+
+									font-size:14px ;  text-transform:capitalize;margin-bottom:30px;width:110%;position:relative;margin-left: -10px;color:#514f4f;height: auto;}
+
+									.detailbox2 p{margin-left: 5px;
+
+
+									}
+
+								.detailbox2 strong{
+font-weight: normal;
+font-size: 14px;
+
+
+								}
+
+
+
+
+
+
+								.icon{
+
+
+	
+	position: relative;
+
+left:20px;
+top:10px;
+
+}
+
+
+
+
+
+
 
 
 
@@ -722,6 +797,14 @@ text-decoration: none;
 
 
 .sale-tag {
+	 
+  background: #000;
+ /* background: url("../img/ribbon-new.png") no-repeat transparent;*/
+  width: 100px;
+  height: 40px;
+}
+
+.sale-tag12 {
 	 position: absolute;
   top: -3px;
   left: -3px;
@@ -729,8 +812,6 @@ text-decoration: none;
   width: 81px;
   height: 81px;
 }
-
-
 
 .imager{
 	height:200px;}
@@ -760,3 +841,10 @@ text-decoration: none;
   *:focus {
     outline: 0;
 }
+
+h6{font-family: 'Actor', sans-serif;
+	color:#FFF;
+	font-size:16px;
+	letter-spacing:1px;
+	font-weight:200;
+	text-align:center;}

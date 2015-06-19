@@ -1,8 +1,27 @@
 
 @import url("foundation.css");
 @import url("f-awesome/font-awesome.min.css");
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/Roboto-Black.ttf);
+}
 
 @font-face {
+    font-family: roboto;
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/roboto-slabregular.ttf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/RobotoSlab-Thin.ttf);
+}
+
+
+/*@font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
@@ -13,7 +32,7 @@
   font-style: normal;
   font-weight: 700;
   src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
-}
+}*/
 
 /*html { overflow-y:scroll !important; }
 
@@ -254,8 +273,8 @@ background-position: initial initial; background-repeat: initial initial; }
 .bannerContent h1 { color: #FFF; font-size: 50px; margin-top: 0px; }
 .bannerContent p { font-size: 16px; }
 
-h3.title, h4.title {  border-bottom:1px solid #eee; padding-bottom:10px; color: #666; }
-h2.title{ font-weight: bold; margin-bottom:20px; }
+h3.title, h4.title {  font:url('../fonts/Roboto-Black.ttf');  border-bottom:1px solid #eee; padding-bottom:10px; color: #666; }
+h2.title{ font:url('../fonts/Roboto-Black.ttf'); font-weight: bold; margin-bottom:20px; }
 .row h3.title, .row h2.title , .row h4.title { margin-top:0px; }
 
 /*********** ICONS */
@@ -360,10 +379,11 @@ text-align: center; width: 100%; text-transform: lowercase; font-size: 16px; mar
 /*********************************************************************************** BLOG */
 article { margin:3px 0px;  background:#fff; display: inline-block; width:100%; }
 article:first-child { border-top:0px; }
-article h2 { margin: -2px 4px 4px; font-size: 12px;overflow:hidden;width:170px; }
+article h2 {font-family: 'roboto';
+    font:url('../fonts/Roboto-Black.ttf') ; margin: -2px 4px 4px; font-size: 14px;overflow:hidden;width:170px;font-weight: bold; }
 article h3 a, article h2 a { text-decoration:none !important; font-weight:bold; }
-article h3 a:hover, article h2 a:hover { text-decoration:none; }
-article p { margin-bottom: 3px;height:59px;margin-top:-4px;position: relative; }
+/*article h3 a:hover, article h2 a:hover { text-decoration:none; }*/
+article p { margin-bottom: 3px;height:59px;margin-top:-4px;position: relative;font-weight: bold; }
 article p.posts-summary { height: 70px; overflow:hidden; padding-right: 5px; margin-bottom: 10px;position: relative; }
 article div.a-meta { font-size: 13px; text-align: right; background-color: #f4f3f2; margin-top:-0px; padding-right: 5px; height:auto;position: relative; }
 article div.a-meta.a-meta-left { text-align: left; margin-left:0px;  text-transform:capitalize; border-bottom: 1px solid #CCC; }
@@ -371,7 +391,7 @@ article div.a-meta > a { text-decoration:none; }
 article div.a-meta > span { float:left; }
 /*article .article-img-pane { width:100px; height:80px; text-align:center; position:relative; float:left; margin-right:10px; overflow:hidden; }
 article .article-img-pane img { height:100%; height:80px;max-width: inherit;left:3px; }*/
-article .article-img-pane {  height:150px; text-align:center; position:relative; float:left; margin-right:10px; overflow:hidden; width:100%;}
+article .article-img-pane {  max-height:150px; text-align:center; position:relative; float:left; margin-right:10px; overflow:hidden; width:100%;}
 article .article-img-pane img { height:100%; max-width: inherit;left:3px; width:100%; }
  
 
@@ -383,11 +403,55 @@ article .article-img-pane img { height:100%; max-width: inherit;left:3px; width:
 
 
  article .tag{
+		width:120px;
+		height:25px;
+		/*background:#CCC;*/
+		box-shadow:#000 inset;
+	float:left;
+	
+		position: relative;
+	top:145px;
+		left: 0px;
+		
+		
+		z-index:1;
+		
+		
+		
+		
+		}
+
+
+
+
+
+article .tag111{
+		width:40px;
+		height:40px;
+		/*background:#CCC;*/
+		box-shadow:#000 inset;
+	margin-left: auto;
+	margin-right: auto;
+	
+		position: relative;
+	top:30px;
+		left: -3px;
+		
+		
+		z-index:1;
+		
+		
+		
+		
+		}
+
+
+ article .tag12{
 		width:100%;
 		height:20px;
 		/*background:#CCC;*/
 		box-shadow:#000 inset;
-		float: left;
+
 		position: relative;
 		top:16px;
 		left: -3px;
@@ -403,7 +467,18 @@ article .article-img-pane img { height:100%; max-width: inherit;left:3px; width:
 
 
 
+
 article  img { }
+
+
+.locy{
+	background: #000;
+	width:30px;
+	height:30px;
+
+
+
+}
 		
 
 

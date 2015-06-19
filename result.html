@@ -15,7 +15,8 @@
 	<link rel="stylesheet" href="css/idangerous.swiper.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/movies-app.css">
-
+<link rel="stylesheet" href="css/loader.css" media="screen" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
 
 
   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
@@ -44,7 +45,16 @@
 
 
 
+<!--<script>
+      var alertOnlineStatus = function() {
+        window.alert(navigator.onLine ? 'You are Connected to the Internet' : 'You Are not connected to the internet ,check your internet connection!');
+      };
 
+      window.addEventListener('online',  alertOnlineStatus);
+      window.addEventListener('offline',  alertOnlineStatus);
+
+      alertOnlineStatus();
+    </script>-->
 
 
 
@@ -54,18 +64,10 @@
     });
  </script>
    <script type="text/javascript" language="javascript">
-$(document).ready(function(){
 
-    $('.swiper-slide select').on('mousedown touchstart MSPointerDown', function(e){
-           e.stopPropagation();
-   }); 
-           $('.swiper-slide input').on('mousedown touchstart MSPointerDown', function(e){
-           e.stopPropagation();
-   }); 
-           $('.swiper-slide textarea').on('mousedown touchstart MSPointerDown', function(e){
-           e.stopPropagation();
-   }); 
-});
+
+    
+
    
    $(document).ready(function() {
 
@@ -94,10 +96,32 @@ $(document).ready(function(){
    
   
    </script>
+
+   <script type="text/javascript">
+
+   $(document).ready(function() {
+   setTimeout(function() {
+    $('#loader').fadeOut('slow');
+}, 2000);
+});
+   </script>
+
+
+   <script type="text/javascript">
+$(window).load(function() {
+
+    $('#stage1').hide();
+
+    setTimeout(function(){
+        $('#stage1').fadeIn('slow');
+    },2000);
+
+});
+   </script>
+
 </head>
 
 
- 
 
 
 
@@ -112,20 +136,7 @@ $(document).ready(function(){
 
 
 
-<div class="swiper-nav">
 
-		<div class="swiper-wrapper">
-			<div class="swiper-slide active-nav">
-            
-			
-				
-				<div class="title" style="border-right: 1px solid #ccc;">Hapnin</div>
-			</div>
-			<div class="swiper-slide">
-				
-				
-				<div class="title">Explore</div>
-			</div>
 			<!--<div class="swiper-slide">
 				
 				
@@ -159,9 +170,18 @@ $(document).ready(function(){
 
 
 
+          <div id="loader" style="background:transparent;">
+    <h1></h1>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+
+
           <div class="input-group" style="border:#fff;"><input type="text" name="password" class="form-control" required Placeholder="Check Hapnin With Location" style=
             "font-size:15px; "   ><span
-                    class="input-group-btn"><input type="submit" value="Check"  class="btn btn-primary" style="height:34px;font-size:13px;margin-top:-0px;background:#b34d9d;border:#682d91;">Check</a></span></div>
+                    class="input-group-btn"><input type="submit" value="Check"  class="btn btn-primary" style="height:34px;font-size:13px;margin-top:-0px;background:#0288d1;border:#682d91;">Check</a></span></div>
 <!--<div class="search">
 				 <div class="lighter">
 <form id="#search">

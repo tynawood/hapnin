@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1">
+	<title>Hapnin</title>
+
+	
+	<link rel="stylesheet" href="css/normalize.css">
+	
+    
+    
+	  <script type="text/javascript">
+
+
+$(document).ready(function(){
+            setTimeout(function(){
+                navigator.splashscreen.hide();
+           },1500);
+        });
+
+    </script>
+</head>
+
+
+<body style="background:#ccc;">
+
+<video width="100%" height="auto" autoplay="true" >
+  <source src="hap.mp4" type="video/mp4">
+
+
+</video>
+
+
+
+  
+
+
+
+
+
+ <script>
+ setTimeout(function () {
+       window.location = "main.html"; //will redirect to your blog page (an ex: blog.html)
+    }, 6000);
+     
+   </script>
+
+	
+
+
+
+			
+
+<script src="js/jquery.min.js"></script>
+	<!-- Don't forget to get the latest Swiper and scrollbar version here-->
+<script src="js/idangerous.swiper-2.0.min.js"></script>
+<script src="js/movies-app.js"></script>
+
+    
+    <!-- <script>
+  var tabsSwiper = new Swiper('.swiper-container',{
+    onlyExternal : true,
+    speed:500
+  })
+  $(".tabs a").on('touchstart mousedown',function(e){
+    e.preventDefault()
+    $(".tabs .active").removeClass('active')
+    $(this).addClass('active')
+    tabsSwiper.swipeTo( $(this).index() )
+  })
+  $(".tabs a").click(function(e){
+    e.preventDefault()
+  })
+  </script>-->
+  
+</body>
+</html>
