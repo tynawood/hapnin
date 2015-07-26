@@ -50,7 +50,7 @@
 
 
 
-<!--<script>
+ <!--<script>
     var map;    // Google map object
     
     // Initialize and display a google map
@@ -121,91 +121,23 @@
 
     </script>-->
 
-   <!-- <script>
-
-
-      var map; 
-       function displayMap() {
+    <script>
+        function displayMap() {
                     document.getElementById('map_canvas').style.display="block";
                     initialize();
                 }
-
-
-
-         function initialize() { 
+         function initialize() {
                   // create the map
 
-                  var latlng = new google.maps.LatLng( 5.5912087, -0.1797294 );   // Washington, DC
-        
-        // Map options for how to display the Google map
-        var mapOptions = { zoom: 15, center: latlng  };
-        
-        // Show the Google map in the div with the attribute id 'map-canvas'.
-        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-
-               /* var myOptions = {
+                var myOptions = {
                     zoom: 14,
                     center: new google.maps.LatLng(0.0, 0.0),
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                   }
                     map = new google.maps.Map(document.getElementById("map_canvas"),
-                                                myOptions);*/
+                                                myOptions);
 
                  }
-
-
-// Update the Google map for the user's inputted address
-    function UpdateMap( )
-    {
-        var geocoder = new google.maps.Geocoder();    // instantiate a geocoder object
-        
-        // Get the user's inputted address
-        var address = document.getElementById( "addresss" ).value;
-    
-        // Make asynchronous call to Google geocoding API
-        geocoder.geocode( { 'addresss': address }, function(results, status) {
-            var addr_type = results[0].types[0];    // type of address inputted that was geocoded
-            if ( status == google.maps.GeocoderStatus.OK ) 
-                ShowLocation( results[0].geometry.location, address, addr_type );
-            else     
-                alert("Geocode was not successful for the following reason: " + status);        
-        });
-    }
-
- // Show the location (address) on the map.
-    function ShowLocation( latlng, address, addr_type )
-    {
-        // Center the map at the specified location
-        map.setCenter( latlng );
-        
-        // Set the zoom level according to the address level of detail the user specified
-        var zoom = 12;
-        switch ( addr_type )
-        {
-        case "administrative_area_level_1"  : zoom = 10; break;      // user specified a state
-        case "locality"                     : zoom = 15; break;     // user specified a city/town
-        case "street_address"               : zoom = 20; break;     // user specified a street address
-        }
-        map.setZoom( zoom );
-        
-        // Place a Google Marker at the same location as the map center 
-        // When you hover over the marker, it will display the title
-        var marker = new google.maps.Marker( { 
-            position: latlng,     
-            map: map,      
-            title: address
-        });
-        
-        // Create an InfoWindow for the marker
-        var contentString = "" + address + "";  // HTML text to display in the InfoWindow
-        var infowindow = new google.maps.InfoWindow( { content: contentString } );
-        
-        // Set event to display the InfoWindow anchored to the marker when the marker is clicked.
-        google.maps.event.addListener( marker, 'click', function() { infowindow.open( map, marker ); });
-    }
-    
-    // Call the method 'Init()' to display the google map when the web page is displayed ( load event )
-    google.maps.event.addDomListener( window, 'load', Init );
 
 
 </script>
@@ -215,11 +147,11 @@
     #map-canvas
     {
         width : 100%;  /* map width */
-        height: 200px;  /* map height */
+        height: 250px;  /* map height */
 
         display:none;
     }
-    </style>-->
+    </style>
 
 
 
@@ -241,12 +173,8 @@
 
             //var anchor = document.getElementById('stage1');
     //var id = $('#stage1').attr('id');
-
-
               
-             $('#stage1').append(  /*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/     '  <div class="col s12 m6 l4"><div id="profile-card" class="card">    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src= "'+ jd[index].img +'" ></div> <div class="card-content"> <img src="images/avatar.jpg" alt="" class="circle responsive-img activator card-profile-image"> <a class="btn-floating activator btn-move-up waves-effect waves-light darken-2 right"> <i class="mdi-action-view-headline activator"> </i></a> <span class="card-title activator grey-text text-darken-4"> ' + jd[index].what + '</span> <p><i class="mdi-action-room cyan-text text-darken-2"></i> ' + jd[index].location+'</p><p><i class="mdi-action-today cyan-text text-darken-2"></i> '+ jd[index].date+ '</p><p><i class="mdi-action-schedule cyan-text text-darken-2"></i> ' + jd[index].time+ '</p> <div class="card-reveal" style="margin-left:-20px;"> <span class="card-title grey-text text-darken-4">' + jd[index].what + '<i class="mdi-navigation-close right"></i></span><p> ' + jd[index].detail+ '</p><p><i class="mdi-action-room cyan-text text-darken-2"></i> ' + jd[index].location+'</p><p><i class="mdi-action-today cyan-text text-darken-2"></i> '+ jd[index].date+ '</p><p><i class="mdi-action-schedule cyan-text text-darken-2"></i> ' + jd[index].time+ '</p><p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i>' + jd[index].screenname + '</p><a href=""><i class="mdi-communication-call spacer cyan-text text-darken-2"></a></i><a href=""><i class="mdi-social-share spacer  cyan-text text-darken-2"></i></a><a href=""><i class="mdi-action-visibility  cyan-text text-darken-2"></i></a><form><input class="button block red" type="submit"  data-inline="true" value="Red Flag Event" id="register" style="width:100%;height:40px;background:#f10d02;color:#fff;border:none;margin-left:0px;margin-right:auto"></form></div></div></div></div>');
-
-             // $('#addresss').val( '' + jd[index].location+'');
+             $('#stage1').append(  /*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/     '  <div class="col s12 m6 l4"><div id="profile-card" class="card">    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src= "'+ jd[index].img +'" ></div> <div class="card-content"> <img src="images/avatar.jpg" alt="" class="circle responsive-img activator card-profile-image"> <a class="btn-floating activator btn-move-up waves-effect waves-light darken-2 right"> <i class="mdi-action-view-headline activator"> </i></a> <span class="card-title activator grey-text text-darken-4"> ' + jd[index].what + '</span> <p><i class="mdi-action-room cyan-text text-darken-2"></i> ' + jd[index].location+'</p><p><i class="mdi-action-today cyan-text text-darken-2"></i> '+ jd[index].date+ '</p><p><i class="mdi-action-schedule cyan-text text-darken-2"></i> ' + jd[index].time+ '</p> <div class="card-reveal" style="margin-left:-20px;"> <span class="card-title grey-text text-darken-4">' + jd[index].what + '<i class="mdi-navigation-close right"></i></span><p> ' + jd[index].detail+ '</p><p><i class="mdi-action-room cyan-text text-darken-2"></i> ' + jd[index].location+'</p><p><i class="mdi-action-today cyan-text text-darken-2"></i> '+ jd[index].date+ '</p><p><i class="mdi-action-schedule cyan-text text-darken-2"></i> ' + jd[index].time+ '</p><div id="map_canvas" style="width:100%; height:500px; margin-left:80px;" ></div><button onclick="displayMap()">Show Map</button><form><input type="text" name="" value="" style="display:none"><input class="button block red" type="submit"  data-inline="true" value="Red Flag Event" id="register" style="width:100%;height:40px;background:#f10d02;color:#fff;border:none;margin-left:0px;margin-right:auto"></form></div></div></div></div>');
 
 
                 //$('#address').val(' ' + jd.location+ '');
@@ -254,7 +182,7 @@
                 //$('#map-canvas').append(' ' + jd.location+ '');
 
 
-//<div><label for="address"> Address:</label><input type="text" id="addresss" value="" /><button id="vani" onclick="UpdateMap()" >Locate</button></div><div id="map_canvas" style="width:100%; height:200px;" ></div><button onClick="displayMap()">Show Map</button>
+
 
 
 
@@ -278,16 +206,10 @@
 
 </head>
 
-<body  >
+<body>
     <!-- Start Page Loading -->
    <div id="loader-wrapper">
-        <div id="loader">
-
-
-
-
-
-        </div>        
+        <div id="loader"></div>        
       
   
     </div>
@@ -301,50 +223,22 @@
         <div class="navbar-fixed">
             <nav class="blue">
                 <div class="nav-wrapper">
-
-
-                    <h1 class="logo-wrapper"><a href="index.html" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text"></span></h1>
-
-
-              <a class="right dropdown-button  waves-effect waves-light " style="margin-top:10px;" data-activates="dropdown2"><i class="mdi-navigation-more-vert"></i></a>
-                          <ul id="dropdown2" class="dropdown-content" style="margin-left:-10px;margin-top:15px">
-                            <li><a href="#!" class="-text" >hapnin's</a>
-                            </li>
-                            <li><a href="#!" class="-text ">Info</a>
-                            </li>
-                            <li><a href="#!" class="-text">Share</a>
-                            </li>
-                          </ul>
-                
-                   
-                  <!--  <form class="row right" style="position:relative;left:100px;" >
-                      <div class="input-field" style="width:50%;">
-                        <input id="search"  type="text" required="" style="position:relative;left:-150px;">
-                        <label for="search" class="right"><button style="background:transparent;border:none"><i class="mdi-action-search"></i></button>
-                        </label>
-                      </div>
-                    </form>-->
-                  
-                 
-                
-                    <!--<ul class="right hide-on-med-and-down">
+                    <h1 class="logo-wrapper"><a href="index-2.html" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">Materialize</span></h1>
+                    <ul class="right hide-on-med-and-down">
                         <li class="search-out">
                             <input type="text" class="search-out-text">
                         </li>
                         <li>    
                             <a href="javascript:void(0);" class="waves-effect waves-block waves-light show-search"><i class="mdi-action-search"></i></a>                              
                         </li>
-                       <!-- <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a>
-                        </li>-->
-                       <!-- <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light"><i class="mdi-social-notifications"></i></a>
-                        </li>-->
+                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a>
+                        </li>
+                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light"><i class="mdi-social-notifications"></i></a>
+                        </li>
                         <!-- Dropdown Trigger -->                        
-                       <!-- <li><a href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse"><i class="mdi-communication-chat"></i></a>
-                        </li>-->
-                   <!-- </ul>-->
-
-
-
+                        <li><a href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse"><i class="mdi-communication-chat"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </div>
@@ -362,9 +256,9 @@
             <!-- START LEFT SIDEBAR NAV-->
             <aside id="left-sidebar-nav">
                 <ul id="slide-out" class="side-nav fixed leftside-navigation">
-                  <!--  <li class="user-details cyan darken-2">
+                    <li class="user-details cyan darken-2">
                         <div class="row">
-                           <!-- <div class="col col s4 m4 l4">
+                            <div class="col col s4 m4 l4">
                                 <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-image">
                             </div>
                             <div class="col col s8 m8 l8">
@@ -383,19 +277,19 @@
                                 </ul>
                                 <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown">John Doe<i class="mdi-navigation-arrow-drop-down right"></i></a>
                                 <p class="user-roal">Administrator</p>
-                            </div>-->
-                        <!--</div>
-                    </li>-->
-                    <li class="bold"><a href="index-2.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Conference/Seminars </a>
+                            </div>
+                        </div>
                     </li>
-                    <li class="bold"><a href="app-email.html" class="waves-effect waves-cyan"><i class="mdi-communication-email"></i> Competitions </a>
+                    <li class="bold"><a href="index-2.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
                     </li>
-                    <li class="bold"><a href="app-calendar.html" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i> Classes /Workshop </a>
+                    <li class="bold"><a href="app-email.html" class="waves-effect waves-cyan"><i class="mdi-communication-email"></i> Mailbox <span class="new badge">4</span></a>
+                    </li>
+                    <li class="bold"><a href="app-calendar.html" class="waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i> Calender</a>
                     </li>
                     <li class="no-padding">
                         <ul class="collapsible collapsible-accordion">
-                            <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-invert-colors"></i> Charity</a>
-                               <!-- <div class="collapsible-body">
+                            <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-invert-colors"></i> CSS</a>
+                                <div class="collapsible-body">
                                     <ul>
                                         <li><a href="css-typography.html">Typography</a>
                                         </li>                                        
@@ -408,10 +302,10 @@
                                         <li><a href="css-sass.html">Sass</a>
                                         </li>
                                     </ul>
-                                </div>-->
+                                </div>
                             </li>
-                            <li class="bold"><a class="collapsible-header  waves-effect waves-cyan"><i class="mdi-image-palette"></i> Debates </a>
-                               <!-- <div class="collapsible-body">
+                            <li class="bold"><a class="collapsible-header  waves-effect waves-cyan"><i class="mdi-image-palette"></i> UI Elements</a>
+                                <div class="collapsible-body">
                                     <ul>
                                         <li><a href="ui-buttons.html">Buttons</a>
                                         </li>
@@ -438,32 +332,32 @@
                                         <li><a href="ui-tooltip.html">Tooltip</a>
                                         </li>
                                     </ul>
-                                </div>-->
+                                </div>
                             </li>
-                            <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i>Festivals</a>
+                            <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i> Widgets <span class="new badge"></span></a>
                             </li>
-                            <li class="bold"><a class="collapsible-header  waves-effect waves-cyan"><i class="mdi-editor-border-all"></i> Fairs </a>
-                                <!--<div class="collapsible-body">
+                            <li class="bold"><a class="collapsible-header  waves-effect waves-cyan"><i class="mdi-editor-border-all"></i> Tables</a>
+                                <div class="collapsible-body">
                                     <ul>
                                         <li><a href="table-basic.html">Basic Tables</a>
                                         </li>
                                         <li><a href="table-data.html">Data Tables</a>
                                         </li>
                                     </ul>
-                                </div>-->
+                                </div>
                             </li>
-                            <li class="bold"><a class="collapsible-header  waves-effect waves-cyan"><i class="mdi-editor-insert-comment"></i> Fundraisings</a>
-                               <!-- <div class="collapsible-body">
+                            <li class="bold"><a class="collapsible-header  waves-effect waves-cyan"><i class="mdi-editor-insert-comment"></i> Forms</a>
+                                <div class="collapsible-body">
                                     <ul>
                                         <li><a href="form-elements.html">Form Elements</a>
                                         </li>
                                         <li><a href="form-layouts.html">Form Layouts</a>
                                         </li>
                                     </ul>
-                                </div>-->
+                                </div>
                             </li>
-                            <li class="bold"><a class="collapsible-header  waves-effect waves-cyan"><i class="mdi-social-pages"></i> Lauches</a>
-                               <!-- <div class="collapsible-body">
+                            <li class="bold"><a class="collapsible-header  waves-effect waves-cyan"><i class="mdi-social-pages"></i> Pages</a>
+                                <div class="collapsible-body">
                                     <ul>                                        
                                         <li><a href="page-login.html">Login</a>
                                         </li>
@@ -480,10 +374,10 @@
                                         <li><a href="page-blank.html">Blank</a>
                                         </li>
                                     </ul>
-                                </div>-->
+                                </div>
                             </li>
-                            <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-editor-insert-chart"></i> Meetings/Networking</a>
-                               <!-- <div class="collapsible-body">
+                            <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-editor-insert-chart"></i> Charts</a>
+                                <div class="collapsible-body">
                                     <ul>
                                         <li><a href="charts-chartjs.html">Chart JS</a>
                                         </li>
@@ -498,44 +392,11 @@
                                         <li><a href="charts-sparklines.html">Sparkline Charts</a>
                                         </li>
                                     </ul>
-                                </div>-->
-                            </li>
-
-
-
-
-                             <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i>Music</a>
-                            </li>
-
-                            <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i>Movies</a>
-                            </li>
-                             <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i>Night Club </a>
-                            </li>
-
-                              <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i>Others </a>
-                            </li>
-
-                            <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i>Parties  </a>
-                            </li>
-
-
-                             <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i>Premiers </a>
-                            </li>
-
-                             <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i>Performing Arts </a>
-                            </li>
-
-                             <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i>Protests </a>
-                            </li>
-
-                             <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i>Reuniouns </a>
-                            </li>
-
-                             <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i>Sports & Fitness </a>
+                                </div>
                             </li>
                         </ul>
                     </li>
-                   <!-- <li class="li-hover"><div class="divider"></div></li>
+                    <li class="li-hover"><div class="divider"></div></li>
                     <li class="li-hover"><p class="ultra-small margin more-text">MORE</p></li>
                     <li><a href="css-grid.html"><i class="mdi-image-grid-on"></i> Grid</a>
                     </li>
@@ -544,8 +405,18 @@
                     <li><a href="css-helpers.html"><i class="mdi-communication-live-help"></i> Helpers</a>
                     </li>
                     <li><a href="changelogs.html"><i class="mdi-action-swap-vert-circle"></i> Changelogs</a>
-                    </li> -->                   
-                    
+                    </li>                    
+                    <li class="li-hover"><div class="divider"></div></li>
+                    <li class="li-hover"><p class="ultra-small margin more-text">Daily Sales</p></li>
+                    <li class="li-hover">
+                        <div class="row">
+                            <div class="col s12 m12 l12">
+                                <div class="sample-chart-wrapper">                            
+                                    <div class="ct-chart ct-golden-section" id="ct2-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
                 <a href="#" data-activates="slide-out" class="sidebar-collapse  btn-medium waves-effect waves-light hide-on-large-only darken-2" style="color:#fff;"><i class="mdi-navigation-menu" ></i></a>
             </aside>
@@ -951,10 +822,6 @@
 
     </div>-->
 
-
-
-
-
                              <article id="stage1" >
 
                                
@@ -1148,7 +1015,7 @@
 
                     <!-- Floating Action Button -->
                     <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-                        <a href="sharehap.html" class="btn-floating btn-large blue">
+                        <a href="" class="btn-floating btn-large blue">
                           <i class="large mdi-editor-mode-edit"></i>
                         </a>
                        
